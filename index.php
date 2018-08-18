@@ -18,12 +18,13 @@
     	<div class="swiper-wrapper">
         <!-- Slides -->
         	<div class="swiper-slide">
-        		<img class="slide-image" src="slider/slide1.jpg" alt=""><div class="slider-label"><span class="label">Подготовка к экзаменам онлайн</span><span class="sublabel">Мы приготовили для вас специальные видеоуроки и тестовые задания, которые помогут вам успешно сдать ,как теоритическую, так и практическую часть экзамена на получение прав разных классификаций</span><div onclick="alert('123');" class="slider-button"><span>Продолжить</span></div></div>
+        		<img class="slide-image" src="slider/slide1.jpg" alt=""><div class="slider-label"><span class="label">Подготовка к экзаменам онлайн</span><span class="sublabel">Мы приготовили для вас специальные видеоуроки и тестовые задания, которые помогут Вам успешно сдать ,как теоритическую, так и практическую часть экзамена на получение прав разных классификаций</span><div onclick="alert('123');" class="slider-button"><span>Продолжить</span></div></div>
 				
 
         	</div>
-        	<div class="swiper-slide"><img class="slide-image" src="slider/slide2.jpg" alt=""><div class="slider-label"><span class="label">Зарекомендуй себя как профессионального инструктора</span><span class="sublabel">Зарегестрийруйтесь и зарекомендуйте себя как профессионала своего дела, расскажите о себе и докажите, что именно вы можете научить любого желающего вне зависимости от его опыта</span><div onclick="alert('123');" class="slider-button"><span>Подробнее</span></div></div></div>
-        	<div class="swiper-slide">Slide 3</div>
+        	<div class="swiper-slide"><img class="slide-image" src="slider/slide2.jpg" alt=""><div class="slider-label"><span class="label">Зарекомендуй себя как профессионального инструктора</span><span class="sublabel">Зарегестрийруйтесь и зарекомендуйте себя как профессионала своего дела, расскажите о себе и докажите, что именно Вы можете научить любого желающего вне зависимости от его опыта</span><div onclick="alert('123');" class="slider-button"><span>Подробнее</span></div></div></div>
+
+        	<div class="swiper-slide"><img class="slide-image" src="slider/slide3.jpg" alt=""><div class="slider-label"><span class="label">Зарегистрируйте свою автошколу</span><span class="sublabel">Это отличный способ привлечения новых студентов, квалифицированных преподавателей и опытных водителей.</span><div onclick="alert('123');" class="slider-button"><span>Добавить автошколу</span></div></div></div>
         
    		</div>
     <!-- If we need pagination -->
