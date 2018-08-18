@@ -50,6 +50,43 @@
 		<div class="search-button"><div style="position: relative; width: 100%; height: 100%;"><span class="search-label"><i class="fa fa-search"></i> Поиск</span> </div>
 	</div>
 	</div>
+  <div class="container">
+    <div class="grid-container">
+      <div class="card">
+        <img class="card-img" src="slider/slide1.jpg" alt="">
+        <span class="card-title">За Рулем.KZ</span>
+        <hr style="border: 0.05vw solid rgb(0, 122, 255);">
+        <span class="card-content">
+          г. Астана
+        </span>
+      </div>
+      <div class="card">
+        <img class="card-img" src="slider/slide1.jpg" alt="">
+        <span class="card-title">За Рулем.KZ</span>
+        <hr style="border: 0.05vw solid rgb(0, 122, 255);">
+        <span class="card-content">
+          г. Астана
+        </span>
+      </div>
+      <div class="card">
+        <img class="card-img" src="slider/slide1.jpg" alt="">
+        <span class="card-title">За Рулем.KZ</span>
+        <hr style="border: 0.05vw solid rgb(0, 122, 255);">
+        <span class="card-content">
+          г. Астана
+        </span>
+       </div>
+      <div class="card">
+        <img class="card-img" src="slider/slide1.jpg" alt="">
+        <span class="card-title">За Рулем.KZ</span>
+        <hr style="border: 0.05vw solid rgb(0, 122, 255);">
+        <span class="card-content">
+          г. Астана
+        </span>
+      </div>
+
+    </div>
+  </div>
 	<div>	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa eos cum est repellat maiores assumenda similique odit perferendis accusantium ut aliquid a debitis, dicta molestiae doloribus atque adipisci, quos amet!</div>
 	<div>Corrupti laboriosam, voluptates vitae. Voluptate, cupiditate, placeat perspiciatis illo, alias est possimus ut accusamus molestias tenetur ipsam amet in! Quos nulla saepe odit quod exercitationem, aliquid error numquam neque voluptatibus!</div>
 	<div>Esse sed ipsa quod expedita laudantium architecto illum quas voluptatibus, aliquid et quae unde perspiciatis suscipit illo maiores fugit aspernatur similique eum pariatur dolorum quasi corrupti minima. Minus, molestias illo?</div>
