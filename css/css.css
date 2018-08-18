@@ -1,0 +1,65 @@
+body{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+a{
+	text-decoration: none;
+}
+.swiper-container {
+    width: 100%;
+    height: 100vh;
+}
+.slide-image{
+	width: 100%;
+	z-index: 0;
+	opacity: 0.4;
+}
+.slider-label{
+	z-index: 99;
+	position: absolute;
+	font-family: 'Montserrat Alternates', sans-serif;
+	font-weight:bold;
+	font-size: 4vw;
+	top:65%;
+	left:10%;
+	transform: translateY(-100%);
+	color:#fff;
+}
+.swiper-slide{
+	position: relative;
+	background-color: black;
+}
+.sublabel{
+	font-size: 1.2vw;
+	float: right;
+	width: 50%;
+	margin-right: 20%;
+	color:lightgray;
+}
+.slider-button{
+	border-radius: 2vw;
+	border:0.3vw solid #007AFF;
+	background-color: rgb(0,0,0,0.5);
+	color:gray;
+	font-size: 1.5vw;
+	width: 20%;
+	height: 5vw;
+	margin-left:5%;
+	cursor: pointer;
+	position: relative;
+}
+.slider-button span{
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+}
+.slider-button:hover{
+	 background-color: rgb(0,122,255,0.3);
+}
+.slider-button:hover span{
+	color: #fff;
+}
+
+
