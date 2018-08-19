@@ -9,7 +9,7 @@ $('.signup').hover(function(){
 	$(this).removeClass('hovered');
 });
 $('.signup-form').hide();
-
+$('.loginform').css('height','40vh');
 
 $('.signin').click(function(){
 	$('.signup').removeClass('active');
