@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-	<meta charset="UTF-8">
-	<title>Autoschool</title>
 
-	<link rel="stylesheet" href="css/css.css">
-	<link rel="stylesheet" href="css/header.css">
-	<link rel="stylesheet" href="css/search.css">
-	<link href="https://fonts.googleapis.com/css?family=Comfortaa|Faster+One|Montserrat+Alternates" rel="stylesheet">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-	<link rel="stylesheet" href="css/swiper.css">
-	
-</head>
-<body>
 	<?php include 'header.php'; ?>
 	<div class="swiper-container">
     <!-- Additional required wrapper -->
@@ -47,10 +33,10 @@
 				<option value="Актау">Актау</option>
 			</select>
 		</div>
-		<div class="search-button"><div style="position: relative; width: 100%; height: 100%;"><span class="search-label"><i class="fa fa-search"></i> Поиск</span> </div>
+		<div  id="as" class=" search-button"><div style="position: relative; width: 100%; height: 100%;"><span class="search-label"><i class="fa fa-search"></i> Поиск</span> </div>
 	</div>
 	</div>
-  <div class="container">
+  <div  class="container">
     <div class="grid-container">
       <div class="card">
         <img class="card-img" src="slider/slide1.jpg" alt="">
@@ -101,11 +87,23 @@
 	<div>Ipsam inventore eveniet recusandae dolorum magnam laudantium, ut ratione voluptates cupiditate, repellendus, rem atque amet. Id ab quia ad voluptatum est animi! Quibusdam debitis, ab praesentium beatae illum est atque.</div>
 	<div>Odio voluptate maxime nobis doloribus beatae quaerat ipsam vel recusandae facere eos cumque adipisci deleniti facilis omnis modi enim quis cum corrupti numquam corporis, fuga sint ratione! Fugiat, nisi quis.</div>
 </body>
-<script
-  src="http://code.jquery.com/jquery-3.3.1.slim.js"
-  integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="
-  crossorigin="anonymous"></script>
   <script src="js/swiper.js"></script>
+  	<script>$(document).ready(function(){
+$("#menu").on("click","a", function (event) {
+//отменяем стандартную обработку нажатия по ссылке
+event.preventDefault();
+
+//забираем идентификатор бока с атрибута href
+var id = $(this).attr('href'),
+
+//узнаем высоту от начала страницы до блока на который ссылается якорь
+top = $(id).offset().top;
+bottom = $('#menu').height()+5;
+//анимируем переход на расстояние - top за 1500 мс
+$('body,html').animate({scrollTop: top-bottom}, 800);
+});
+});
+</script></script>
 
 <script>
     $(document).ready(function () {
@@ -139,7 +137,6 @@
   $(window).on("scroll", function() {
     if ($(window).scrollTop() > 50) { $('.header').addClass('fixed');   }
           else { $('.header').removeClass('fixed');  }
-    });     
-  
-</script>
+    });     </script>
+
 </html>

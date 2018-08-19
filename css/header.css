@@ -6,6 +6,15 @@
 	z-index: 999;
 	transition: 0.5s;
 }
+.header2{
+	width: 100%;
+	position: relative;
+	height: 6.5vw;
+	box-sizing: border-box;
+	z-index: 999;
+	transition: 0.5s;
+	
+}
 .logo{
 	width: 30%;
 	height: 100%;
