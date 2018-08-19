@@ -73,19 +73,7 @@
 
     </div>
   </div>
-	<div>	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa eos cum est repellat maiores assumenda similique odit perferendis accusantium ut aliquid a debitis, dicta molestiae doloribus atque adipisci, quos amet!</div>
-	<div>Corrupti laboriosam, voluptates vitae. Voluptate, cupiditate, placeat perspiciatis illo, alias est possimus ut accusamus molestias tenetur ipsam amet in! Quos nulla saepe odit quod exercitationem, aliquid error numquam neque voluptatibus!</div>
-	<div>Esse sed ipsa quod expedita laudantium architecto illum quas voluptatibus, aliquid et quae unde perspiciatis suscipit illo maiores fugit aspernatur similique eum pariatur dolorum quasi corrupti minima. Minus, molestias illo?</div>
-	<div>Expedita natus doloribus eveniet! At corporis id exercitationem reiciendis ex tenetur, vitae eos odit voluptatibus expedita! Quisquam asperiores incidunt dolorum at tenetur, distinctio quos similique natus, tempora facere provident, inventore.</div>
-	<div>Natus ipsum aliquam, nostrum laboriosam sapiente quae alias, molestiae tempore accusamus cum voluptatem veritatis architecto doloremque magnam facilis eius explicabo vel dolor. Harum fugit, omnis nisi et aliquid dolor eaque!</div>
-	<div>	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla qui deserunt adipisci aperiam distinctio repellendus, veniam aspernatur id! Inventore molestiae, laborum harum eum. Harum veritatis et officiis vel. Illo, modi!</div>
-	<div>Doloribus doloremque rem quia numquam cupiditate facilis illum nostrum eveniet deleniti vitae cum a at dolorum assumenda voluptate dolorem eum, corporis blanditiis consectetur vel nobis? Minima, laborum suscipit? Totam, ullam.</div>
-	<div>Maiores eum animi veniam tempore nemo. Soluta illo, inventore debitis optio. Dicta ipsa ducimus delectus tempore sint obcaecati mollitia dolores, eligendi deserunt vel, aliquam aut totam numquam est, voluptatibus modi.</div>
-	<div>Architecto at placeat recusandae perspiciatis necessitatibus. Minima, architecto esse odit dolor voluptatem ab! Temporibus earum quos esse explicabo accusantium, fuga rerum vitae, aliquam dicta cupiditate tempore maiores itaque sit velit.</div>
-	<div>Cum temporibus illo ex ipsum cupiditate asperiores repellendus vel voluptas in iste vitae, placeat esse earum ab inventore facere. Similique, laboriosam eligendi earum unde rerum deserunt, doloribus nihil aliquid non.</div>
-	<div>Eius, doloremque. Modi unde, libero harum dignissimos, accusantium doloribus. Ducimus officiis excepturi id cupiditate possimus quae, distinctio consequatur illo. Perspiciatis harum voluptas perferendis debitis quibusdam non quasi doloremque atque culpa.</div>
-	<div>Ipsam inventore eveniet recusandae dolorum magnam laudantium, ut ratione voluptates cupiditate, repellendus, rem atque amet. Id ab quia ad voluptatum est animi! Quibusdam debitis, ab praesentium beatae illum est atque.</div>
-	<div>Odio voluptate maxime nobis doloribus beatae quaerat ipsam vel recusandae facere eos cumque adipisci deleniti facilis omnis modi enim quis cum corrupti numquam corporis, fuga sint ratione! Fugiat, nisi quis.</div>
+	 <?php include 'footer.php'; ?>
 </body>
   <script src="js/swiper.js"></script>
   	<script>$(document).ready(function(){
