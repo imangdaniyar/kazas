@@ -1,0 +1,123 @@
+.loginform{
+	margin:auto;
+	width: 25vw;
+	min-height: 40vh;
+	background-color: #162034;
+	border-radius: 2vw;
+	padding: 1vw;
+	position: relative;
+	transition:1s;
+}
+.choise{
+	margin:1vw auto;
+	width: 80%;
+	border-radius: 2vw;
+	overflow: hidden;
+	height: 2.3vw;
+	cursor: pointer;
+
+}
+.signin{
+	width: 50%;
+	height: 100%;
+	background-color: #395ABD;
+	float: left;
+	font-family: 'Montserrat Alternates', sans-serif;
+	position: relative;
+		transition: 0.5s;
+}
+.signup{
+	float: right;
+	width: 50%;
+	height: 100%;
+	background-color: #395ABD;
+	font-family: 'Montserrat Alternates', sans-serif;
+	position: relative;
+	transition: 0.1s;
+}
+.choise span{
+	font-weight: bold;
+	font-size: 1vw;
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform:translate(-50%,-50%);
+	
+
+}
+.hovered{
+	opacity: 0.8;
+	transition: 0.1s;
+}
+.active{
+	transition: 0.1s;
+	background-color: #007AFF;
+}
+
+.up{
+	height: 75vh;
+}
+.inp{
+	position: relative;
+	margin:1vw;
+	margin-top: 3vw;
+	width: 80%;
+	height: 2vw;
+}
+.inp input[type=text], input[type=password], .select-inp{
+	padding: 0.5vw;
+	width: 100%;
+	height: 100%;
+	font-size: 1.5vw;
+	border:0;
+	outline: 0;
+	background-color: rgb(0,0,0,0);
+	color: #fff;
+	border-bottom: 0.1vw solid silver;
+}
+.inp-label{
+	position: absolute;
+	top:40%;
+    left: 0;
+	color: gray;
+	pointer-events: none;
+	font-size:1.2vw;
+	font-family: 'Montserrat Alternates', sans-serif;
+	margin-left: 0.6vw;
+	transition: 0.7s;
+}
+.inp input:valid ~ label,
+.inp input:focus ~ label{
+    top:-1.8vw;
+    color: #007aff;
+    font-size: 1vw;
+}
+.in-submit,.up-submit{
+	width: 50%;
+	height: 2vw;
+	background-color: #007aff;
+	float: right;
+	border-radius: 2vw;
+	padding: 0.5vw;
+	margin:1vw;
+	font-size:1.2vw;
+	font-family: 'Montserrat Alternates', sans-serif;
+	color: black;
+	font-weight: bold;
+	position: relative;
+	cursor: pointer;
+}
+.up-submit{
+	font-size:1vw;
+}
+.in-submit span,.up-submit span{
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform:translate(-50%,-50%);
+}
+
+.in-submit:hover,.up-submit:hover{
+	background-color: #395ABD;
+}
+
