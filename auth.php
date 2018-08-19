@@ -22,6 +22,23 @@
 				<input type="text" name="up-login" id="up-login" required>
 				<label  class="inp-label">Имя пользователя</label>
 			</div>
+			<div class="inp">
+				<input type="text" name="up-login" id="up-login" required>
+				<label  class="inp-label">ФИО</label>
+			</div>
+			<div class="inp">
+				<input type="text" name="up-login" id="up-login" required>
+				<label  class="inp-label">E-mail</label>
+			</div>
+			<div class="inp">
+				<input type="password" name="up-login" id="up-login" required>
+				<label  class="inp-label">Пароль</label>
+			</div>
+			<div class="inp">
+				<input type="password" name="up-login" id="up-login" required>
+				<label  class="inp-label">Повторите пароль</label>
+			</div>
+			
 				
 			<div class="up-submit"><span>Зарегистрироваться</span></div>
 		</div>
