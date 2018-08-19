@@ -67,6 +67,8 @@ a{
 	position: relative;
 	margin: auto;
 	margin-top: 1vw;
+	padding-bottom: 20vw;
+
 }
 .grid-container{
 	display: grid;

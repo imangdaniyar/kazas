@@ -1,0 +1,32 @@
+.footer{
+	width: 100%;
+	position: relative;
+	height: 20vw;
+	box-sizing: border-box;
+	z-index: 999;
+	background-color: #162034;
+	padding: 1vw;
+	margin-top: -10vw;
+}
+.footer-grid{
+	display: grid;
+	grid-template-columns: 25% 25% 25%
+	25%	;
+	grid-template-rows: auto;
+	height: auto;
+	grid-gap: 1vw;
+	width: 80%;
+	text-align: center;
+	margin: auto;
+	color: #395ABD;
+	margin-top: 7%;
+}
+.footer-card{
+	font-family: 'Montserrat Alternates', sans-serif;
+	font-size: 1vw;
+	margin-top: 1vw;
+	font-weight: bold;
+}
+.mail,.call,.findus{
+	cursor: pointer;
+}
