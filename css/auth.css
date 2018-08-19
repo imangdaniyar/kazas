@@ -64,6 +64,14 @@
 	width: 80%;
 	height: 2vw;
 }
+.inp-er{
+	display: none;
+	position: relative;
+	margin:1vw;
+	margin-top: 3vw;
+	width: 80%;
+	height: 2vw;
+}
 .inp input[type=text], input[type=password], .select-inp{
 	padding: 0.5vw;
 	width: 100%;
@@ -119,5 +127,10 @@
 
 .in-submit:hover,.up-submit:hover{
 	background-color: #395ABD;
+}
+#errors{
+	color: red;
+	font-size: 0.7vw;
+	font-family: 'Montserrat Alternates', sans-serif;
 }
 

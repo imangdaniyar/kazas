@@ -24,7 +24,7 @@ $('.signup').click(function(){
 	$('.signin').removeClass('active');
 	$('.signup').addClass('active');
 	$('.loginform').css('transition','1s');
-	$('.loginform').css('height','75vh');
+	$('.loginform').css('height','80vh');
 
 	$('.signin-form').fadeOut(0,function(){
 		$('.signup-form').delay(1000).fadeIn();
