@@ -1,3 +1,14 @@
+<?php
+require 'rb.php';	
+session_start();
+R::setup( 'mysql:host=127.0.0.1;dbname=kazas','root', '' ); 
+ 
+if ( !R::testConnection() )
+{
+        exit ('Нет соединения с базой данных');
+}
+
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
