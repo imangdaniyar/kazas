@@ -1,5 +1,4 @@
-
-	<?php include 'header.php'; ?>
+<?php include 'header.php'; ?>
 	<div class="swiper-container">
     <!-- Additional required wrapper -->
     	<div class="swiper-wrapper">

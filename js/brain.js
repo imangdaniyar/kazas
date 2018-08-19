@@ -1,14 +1,10 @@
 $(document).ready(function(){
-		var error_name = true;
-	var error_sname = true;
-	var error_login = true;
-	var error_password = true;
-	var error_repass = true;
-	var error_gender = true;
+
 	var errors = '';
 	$("#up-name").change(function() {
 		check_name();
-		if(error_name){
+		
+			if(error_name){
 			$('.inp-er').show();
 			$('.loginform').css('height','90vh');
 			$('#errors').html('');
@@ -16,7 +12,10 @@ $(document).ready(function(){
 		}else {
 			$('.loginform').css('height','80vh');
 			$('.inp-er').hide();
-		}
+			errors ='';
+		};
+		
+		
 	});
 	$("#up-sname").focusout(function() {
 		check_sname();if(error_sname){
@@ -27,19 +26,13 @@ $(document).ready(function(){
 		}else {
 			$('.loginform').css('height','80vh');
 			$('.inp-er').hide();
+			errors ='';
 		}
 
 	});
 	$("#up-login").focusout(function() {
-		check_login();if(error_login){
-			$('.inp-er').show();
-			$('.loginform').css('height','90vh');
-			$('#errors').html('');
-			$('#errors').html(errors);
-		}else {
-			$('.loginform').css('height','80vh');
-			$('.inp-er').hide();
-		}
+		check_login();
+		
 	});
 	$("#up-email").focusout(function() {
 		check_email();if(error_email){
@@ -50,6 +43,7 @@ $(document).ready(function(){
 		}else {
 			$('.loginform').css('height','80vh');
 			$('.inp-er').hide();
+			errors ='';
 		}
 	});
 	$("#up-password").focusout(function() {
@@ -62,6 +56,7 @@ $(document).ready(function(){
 		}else {
 			$('.loginform').css('height','80vh');
 			$('.inp-er').hide();
+			errors ='';
 		}
 	});
 	$("#up-repass").focusout(function() {
@@ -73,8 +68,15 @@ $(document).ready(function(){
 		}else {
 			$('.loginform').css('height','80vh');
 			$('.inp-er').hide();
+			errors ='';
 		}
 	});
+			var error_name = true;
+	var error_sname = true;
+	var error_login = true;
+	var error_password = true;
+	var error_repass = true;
+	var error_email = true;
 
 	function check_name() {
 		var name = $('#up-name').val();
@@ -110,8 +112,8 @@ $(document).ready(function(){
 			} else {
 			$('#up-email').css('border-bottom','0.1vw solid red');
 			errors= '';
-			errors = 'email не соответствует стандартам';}
-			error_email = true;
+			errors = 'email не соответствует стандартам';
+			error_email = true;}
 		}
 	};
 	function check_sname() {
@@ -132,9 +134,10 @@ $(document).ready(function(){
 
 		if (login_length < 5 || login_length > 50) {
 			errors = '';
-			error_login = true;
+			
 			$('#up-login').css('border-bottom','0.1vw solid red');
-			errors = 'Имя бользователя не должно содержать пробелов и состоять более чем 5 и менее чем 50 символов';
+			errors = 'Имя пользователя не должно содержать пробелов и состоять более чем 5 и менее чем 50 символов';
+			error_login = true;
 		} else {
 			var str = $('#up-login').serialize();
 			str = 'loginc=1&'+str;
@@ -145,20 +148,56 @@ $(document).ready(function(){
         		data: str,
         	success: function(response) {
         		console.log(response);
+        		if (response == 'as'){
+        		location.replace("http://"+response+"/index.php");	
+        	};
+        		
+
             	if(response == '1'){
             		$('#up-login').css('border-bottom','0.1vw solid green');
             		error_login = false;
+            		if(error_login){
+			$('.inp-er').show();
+			$('.loginform').css('height','90vh');
+			$('#errors').html('');
+			$('#errors').html(errors);
+		}else {
+			$('.loginform').css('height','80vh');
+			$('.inp-er').hide();
+			errors ='';
+		}
             	} else {
             		errors = '';
             		errors = 'Данное имя пользователя уже занято';
             		$('#up-login').css('border-bottom','0.1vw solid red');
             		error_login = true;
+            		if(error_login){
+			$('.inp-er').show();
+			$('.loginform').css('height','90vh');
+			$('#errors').html('');
+			$('#errors').html(errors);
+		}else {
+			$('.loginform').css('height','80vh');
+			$('.inp-er').hide();
+			errors ='';
+		};
+            		
             	}
             
             }
         
     });
 			;
+		};
+		if(error_login){
+			$('.inp-er').show();
+			$('.loginform').css('height','90vh');
+			$('#errors').html('');
+			$('#errors').html(errors);
+		}else {
+			$('.loginform').css('height','80vh');
+			$('.inp-er').hide();
+			errors ='';
 		}
 	};
 
@@ -218,7 +257,10 @@ $(document).ready(function(){
         		cache: false,
         		data: str,
         		success: function(response) {
-            		console.log(response);	
+            		console.log(response);
+            		var obj = jQuery.parseJSON(response);
+            		location.replace(obj.ans);
+
         		}
     		});
 
@@ -231,7 +273,40 @@ $(document).ready(function(){
 		} else {
 			$('.loginform').css('height','80vh');
 			$('.inp-er').hide();
+			console.log(error_repass+' '+error_login+' '+error_sname+' '+error_password+' '+error_email+' '+error_name+' ');
 		}
 	}
 		});
 });
+
+$('.in-submit').on('click',function(){
+var login = $('#in-login').val().trim().toLowerCase();
+	var password = $('#in-password').val().trim();
+	if(login != '' & password != ''){
+			var str = 'signin=1&'+'login='+login+'&'+'password='+password;
+			$.ajax({
+				url: '/brain.php',
+        		type: "POST",
+        		cache: false,
+        		data: str,
+        		success: function(response) {
+            		var obj = jQuery.parseJSON(response);
+            		if (obj.ans==='0'){
+            			$('.loginform').css('height','50vh');
+		$('.inp-er').show();
+            			$('#error').html('Неправильно введен логин');
+            		}	else if (obj.ans==='1') {
+            			$('.loginform').css('height','50vh');
+		$('.inp-er').show();
+            			$('#error').html('Неправильный пароль');
+            		} else {location.replace(obj.ans);}
+        		}
+    		});
+
+	} else {
+		$('.loginform').css('height','50vh');
+		$('.inp-er').show();
+		$('#error').html('Заполните поля');
+	}
+});
+

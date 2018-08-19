@@ -1,4 +1,4 @@
-<?php
+<?php session_start();
 require 'rb.php';	
 R::setup( 'mysql:host=127.0.0.1;dbname=kazas','root', '' ); 
  

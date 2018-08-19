@@ -11,10 +11,10 @@
 				<label class="inp-label">Ваше имя пользователя</label>
 			</div>
 			<div class="inp">
-				<input type="text" name="in-password" id="in-pass" required>
+				<input type="text" name="in-password" id="in-password" required>
 				<label class="inp-label">Ваш пароль</label>
 			</div>
-				
+			<div class="inp-er"><span id="error" ></span></div>	
 			<div class="in-submit"><span>Вход</span></div>
 		</div>
 		<div class="signup-form">

@@ -13,6 +13,7 @@ $('.loginform').css('height','40vh');
 
 $('.signin').click(function(){
 	$('.signup').removeClass('active');
+	$('#error').hide();
 	$('.loginform').css('height','40vh');
 
 	$('.signin').addClass('active');
@@ -23,6 +24,7 @@ $('.signin').click(function(){
 $('.signup').click(function(){
 	$('.signin').removeClass('active');
 	$('.signup').addClass('active');
+	$('#errors').hide();
 	$('.loginform').css('transition','1s');
 	$('.loginform').css('height','80vh');
 
