@@ -3,7 +3,11 @@
 		
 			<div class="mini">
 				<div class="give">
-					<div class="g-button"><i class="fas fa-plus"></i> Подать объявление</div>
+					<?php if(isset($_SESSION['logged'])): ?>
+					<a href="/make.php"><div class="g-button"><i class="fas fa-plus"></i> Подать объявление</div></a>
+					<?php else: ?>
+						<a href="/auth.php"><div class="g-button"><i class="fas fa-plus"></i> Подать объявление</div></a>
+					<?php endif ?>
 				</div>
 				<div class="inst-filters">
 				<div class="filter">
