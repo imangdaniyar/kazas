@@ -11,7 +11,7 @@
 				<label class="inp-label">Ваше имя пользователя</label>
 			</div>
 			<div class="inp">
-				<input type="text" name="in-password" id="in-password" required>
+				<input type="password" name="in-password" id="in-password" required>
 				<label class="inp-label">Ваш пароль</label>
 			</div>
 			<div class="inp-er"><span id="error" ></span></div>	
@@ -43,7 +43,7 @@
 				<label  class="inp-label">Повторите пароль</label>
 			</div>
 			
-			<div class="inp-er"><span id="errors" ></span></div>	
+			<div class="inp-er"><span id="errors"></span></div>	
 			<div class="up-submit"><span>Зарегистрироваться</span></div>
 		</div>
 	</div>

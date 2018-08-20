@@ -1,5 +1,4 @@
-
-	<?php include 'header2.php'; ?>
+<?php include 'header2.php'; ?>
 	
 	
   <div  class="container" style="margin-top: 0vw; width: 100%;">

@@ -21,6 +21,7 @@ if ( !R::testConnection() )
 	<link rel="stylesheet" href="css/header.css">
 	<link rel="stylesheet" href="css/footer.css">
 	<link rel="stylesheet" href="css/auth.css">
+	<link rel="stylesheet" href="css/inst.css">
 	<link rel="stylesheet" href="css/as.css">
 	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
 	<link href="https://fonts.googleapis.com/css?family=Comfortaa|Faster+One|Montserrat+Alternates" rel="stylesheet">
@@ -36,10 +37,22 @@ if ( !R::testConnection() )
 		<span class="logo-title">KAZAS</span><span class="logo-subtitle">рули своей жизнью</span></a>
 	</div>
 	<ul class="navbar">
-		<li class="nav-item"  id="menu"><a href="/#as" class="nav-link"><i class="fas fa-car"><span> Автошколы</span></i></a></li>
+		<li class="nav-item" ><a href="/#as" class="nav-link"><i class="fas fa-car"><span> Автошколы</span></i></a></li>
+		<li class="nav-item"  id="menu"><a href="/inst.php" class="nav-link"><i class="fas fa-users"><span> Инструкторы</span></i></a></li>
 		<li class="nav-item"><a href="" class="nav-link"><i class="fas fa-book"><span> Подготовка</span></i></a></li>
 		<li class="nav-item"><a href="" class="nav-link"><i class="fas fa-address-book"><span> Контакты</span></i></a></li>
-		<li class="nav-item"><a href="" class="nav-link"><i class="fas fa-sign-in-alt"><span> Войти</span></i></a></li>
+		<?php if(isset($_SESSION['logged'])):  ?>
+		<li class="draw">
+			<div class="draw1">
+				<a href="/profile.php" class="nav-link"><i class="fas fa-user"><span> Профиль</span></i></a>
+			</div>
+			<div class="draw2">
+				<a href="/logout.php" class="nav-link"><i class="fas fa-sign-out-alt"><span> Выход</span></i></a>
+			</div>
+		</li>
+		<?php else: ?>
+		<li class="nav-item"><a href="/auth.php" class="nav-link"><i class="fas fa-sign-in-alt"><span> Вход</span></i></a></li>
+		<?php endif ?>
 
 	</ul>
 </div>

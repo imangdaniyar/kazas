@@ -59,9 +59,41 @@
 	height: 100%;
 	list-style: none;
 	position: relative;
-	
+	}
+.draw{
+	width: 50%;
+	height: 200%;
+	list-style: none;
+}
+.draw1{
+	width: 100%;
+	height: 50%;
+	position: relative;
+}
+.draw2{
+	width: 100%;
+	height: 50%;
+	position: relative;
+	display: none;
 
 }
+.draw:hover  .draw2{
+	display: block;
+
+}
+
+.draw1:hover,.draw2:hover{
+	background-color: #007AFF;
+	color:#fff;
+	
+}
+.draw1:hover a,.draw2:hover a{
+	color:#fff;
+	
+}
+
+
+
 .nav-item:hover{
 	background-color: #007AFF;
 	color:#fff;
