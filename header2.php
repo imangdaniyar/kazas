@@ -22,6 +22,7 @@ if ( !R::testConnection() )
 	<link rel="stylesheet" href="css/footer.css">
 	<link rel="stylesheet" href="css/auth.css">
 	<link rel="stylesheet" href="css/inst.css">
+	<link rel="stylesheet" href="css/make.css">
 	<link rel="stylesheet" href="css/as.css">
 	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
 	<link href="https://fonts.googleapis.com/css?family=Comfortaa|Faster+One|Montserrat+Alternates" rel="stylesheet">
