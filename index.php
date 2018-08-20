@@ -1,4 +1,7 @@
 <?php include 'header.php'; ?>
+<?php 
+	$autos  = R::findAll( 'autos' );
+ ?>
 	<div class="swiper-container">
     <!-- Additional required wrapper -->
     	<div class="swiper-wrapper">
@@ -30,45 +33,27 @@
 				<option value="Уральск">Уральск</option>
 				<option value="Шымкент">Шымкент</option>
 				<option value="Актау">Актау</option>
+				<option value="Атырау">Атырау</option>
+				<option value="no">Нет в списке</option>
 			</select>
 		</div>
-		<div  id="as" class=" search-button"><div style="position: relative; width: 100%; height: 100%;"><span class="search-label"><i class="fa fa-search"></i> Поиск</span> </div>
+		<div  onclick="as_filter($('#filter').val())" id="as" class=" search-button"><div style="position: relative; width: 100%; height: 100%;"><span class="search-label"><i class="fa fa-search"></i> Поиск</span> </div>
 	</div>
 	</div>
   <div  class="container">
     <div class="grid-container">
-      <div class="card">
+	<?php 
+		foreach ($autos as $auto) {
+			echo('<a href="as.php?id='.$auto->id.'"><div  class="card">
         <img class="card-img" src="slider/slide1.jpg" alt="">
-        <span class="card-title">За Рулем.KZ</span>
+        <span class="card-title">'.$auto->name.'</span>
         <hr style="border: 0.05vw solid rgb(0, 122, 255);">
         <span class="card-content">
-          г. Астана
+          город: '.$auto->city.'
         </span>
-      </div>
-      <div class="card">
-        <img class="card-img" src="slider/slide1.jpg" alt="">
-        <span class="card-title">За Рулем.KZ</span>
-        <hr style="border: 0.05vw solid rgb(0, 122, 255);">
-        <span class="card-content">
-          г. Астана
-        </span>
-      </div>
-      <div class="card">
-        <img class="card-img" src="slider/slide1.jpg" alt="">
-        <span class="card-title">За Рулем.KZ</span>
-        <hr style="border: 0.05vw solid rgb(0, 122, 255);">
-        <span class="card-content">
-          г. Астана
-        </span>
-       </div>
-      <div class="card">
-        <img class="card-img" src="slider/slide1.jpg" alt="">
-        <span class="card-title">За Рулем.KZ</span>
-        <hr style="border: 0.05vw solid rgb(0, 122, 255);">
-        <span class="card-content">
-          г. Астана
-        </span>
-      </div>
+      </div></a>');
+		}
+	 ?>
 
     </div>
   </div>
@@ -90,7 +75,8 @@ bottom = $('#menu').height()+5;
 $('body,html').animate({scrollTop: top-bottom}, 800);
 });
 });
-</script></script>
+</script>
+<script src="js/js.js"></script>
 
 <script>
     $(document).ready(function () {

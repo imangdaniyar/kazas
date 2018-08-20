@@ -32,3 +32,24 @@ $('.signup').click(function(){
 		$('.signup-form').delay(1000).fadeIn();
 	});
 	});
+
+function as_filter(city) {
+	$('.grid-container').html('');
+	var str = 'foint='+city;
+			$.ajax({
+				url: '/filtration.php',
+        		type: "POST",
+        		cache: false,
+        		data: str,
+        	success: function(response) {
+        		console.log(response);
+        		if(response =="no"){
+        			$('.grid-container').html('<span class="kek";>Результатов нет</span>');
+        		}else{
+        			$('.grid-container').html(response);
+        		}
+        		
+        		
+        	}
+});
+		}
