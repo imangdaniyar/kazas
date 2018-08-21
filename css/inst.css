@@ -90,7 +90,7 @@
 .card-container{
 	grid-template-columns: 100%;
 	grid-template-rows: 50% 16% 16% 16%;
-	height: auto;
+	height: 12vw;
 }
 .card-picture{
 	width: 100%;
@@ -100,6 +100,7 @@
 .card-row{
 	border-bottom: 0.1vw solid #007aff;
 	padding: 1vw;
+	height: 100%;
 }
 .div{
 	grid-template-columns: 50%;

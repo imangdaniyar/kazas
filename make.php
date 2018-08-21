@@ -1,5 +1,12 @@
 <?php include 'header2.php' ?>
 <?php if(isset($_SESSION['logged'])): ?>
+<div class="i-note">
+  <ul>
+    <li>Стаж может быть в диапозоне от 0 до 80 лет</li>
+    <li>Фото является не обязательным атрибутом, как и информация о вас</li>
+    <li>Первый значек фото и будет главным</li>
+  </ul>
+</div>
 <div class="container">
   <div class="make-form">
     <div id="title">Подать объявление</div>
@@ -20,12 +27,12 @@
         <label class="inp-label">Другой город</label>
       </div>
       <div class="inp">
-        <input type="number" name="exp" id="i-exp" required>
+        <input type="number" name="exp" id="i-exp" min="0" max="80" required>
         <label class="inp-label">Стаж вождения</label>
       </div>
       <div class="make-filter">
         <label for="city" class="filter-label">Машина</label>
-        <select name="car" value="Выберете город" id="make-filter">
+        <select name="car" value="Выберете город" id="i-car">
             <option selected="true" value="false">Нет</option>
             <option  value="true">Есть</option>
           </select>
@@ -33,23 +40,23 @@
       <div class="make-filter">
         <label for="lang" class="filter-label">Язык</label>
         <select name="lang" value="Выберете город" id="i-lang">
-            <option selected="true" value="Оба">Оба</option>
-            <option  value="Русский">Русский</option>
-            <option value="Казахский">Казахский</option>
+            <option selected="true" value="b">Оба</option>
+            <option  value="r">Русский</option>
+            <option value="k">Казахский</option>
           </select>
       </div>
       <div class="inp">
-        <div class="make-info" contenteditable="true">Информация о вас</div>
+        <div class="make-info" id="i-info" contenteditable="true">Информация о вас</div>
        
       </div>
       <div class="make-filter inv"></div>
       <div class="make-filter ">
         <label for="photo" class="filter-label">Фото</label>
         <div class="photo-container">
-          <div class="photo"><span><div><span>+</span></div></span></div>
-          <div class="photo"><span><div><span>+</span></div></span></div>
-          <input type="file" class="hidden" name="file1" id="file1">
-          <input type="file" class="hidden" name="file2" id="file2">
+          <div id="c-file1" class="photo"><span><div><span id="c-fille1">+</span></div></span></div>
+          <div id="c-file2" class="photo"><span><div><span id="c-fille2">+</span></div></span></div>
+          <input type="file" accept="image/*,image/jpeg" onchange="file_1(this.files[0]);" class="hidden" name="file1" id="file1">
+          <input type="file" accept="image/*,image/jpeg" onchange="file_2(this.files[0]);" class="hidden" name="file2" id="file2">
         </div>
       </div>
 
