@@ -13,7 +13,7 @@
 	box-sizing: border-box;
 	z-index: 999;
 	transition: 0.5s;
-	
+	margin: 0;
 }
 .logo{
 	width: 30%;
