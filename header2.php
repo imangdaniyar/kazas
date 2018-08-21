@@ -7,6 +7,7 @@ if ( !R::testConnection() )
         exit ('Нет соединения с базой данных');
 }
 
+
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -32,6 +33,7 @@ if ( !R::testConnection() )
 
 </head>
 <body>
+
 <div class="header2">
 	<div class="logo">
 		<a href="index.php"><div class="logo-container">
@@ -52,6 +54,7 @@ if ( !R::testConnection() )
 				<a href="/logout.php" class="nav-link"><i class="fas fa-sign-out-alt"><span> Выход</span></i></a>
 			</div>
 		</li>
+		<input type="text" class="hidden" name="" id="id" value="<?php echo $_COOKIE['id']; ?>">
 		<?php else: ?>
 		<li class="nav-item"><a href="/auth.php" class="nav-link"><i class="fas fa-sign-in-alt"><span> Вход</span></i></a></li>
 		<?php endif ?>

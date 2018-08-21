@@ -1,7 +1,7 @@
 .loginform{
 	margin:auto;
 	width: 25vw;
-	min-height: 40vh;
+	min-height: 20vw;
 	background-color: #162034;
 	border-radius: 2vw;
 	padding: 1vw;
@@ -17,6 +17,11 @@
 	cursor: pointer;
 
 }
+.choise:after{
+	content: '';
+	clear: both;
+	display: table;
+}
 .signin{
 	width: 50%;
 	height: 100%;
@@ -24,11 +29,17 @@
 	float: left;
 	font-family: 'Montserrat Alternates', sans-serif;
 	position: relative;
-		transition: 0.5s;
+	transition: 0.5s;
 }
+.signin:after{
+	content: '';
+	clear: both;
+	display: table;
+}
+
 .signup{
-	float: right;
-	width: 50%;
+	float: left;
+	width:50%;
 	height: 100%;
 	background-color: #395ABD;
 	font-family: 'Montserrat Alternates', sans-serif;
@@ -42,6 +53,7 @@
 	top:50%;
 	left: 50%;
 	transform:translate(-50%,-50%);
+	color: lightgray;
 	
 
 }
@@ -53,10 +65,10 @@
 	transition: 0.1s;
 	background-color: #007AFF;
 }
-
-.up{
-	height: 75vh;
+.active span{
+	color:#fff;
 }
+
 .inp{
 	position: relative;
 	margin:1vw;

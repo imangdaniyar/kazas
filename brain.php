@@ -27,6 +27,7 @@ $user->sname = ucfirst($data['sname']);
 $user->email = $data['email'];
 R::store($user);
 $_SESSION['logged'] = $user;
+setcookie('id',$user->id);
 exit('{ "ans": "http://as/index.php"}');
 };
 if ($_POST['signin']) {
@@ -36,6 +37,7 @@ if ($_POST['signin']) {
 	if ($usera) {
 
 			if( password_verify($data['password'], $usera->password)) {
+						setcookie('id',$usera->id);
 						$_SESSION['logged'] = $usera;
 						exit('{ "ans": "http://as/index.php"}');
 							

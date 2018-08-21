@@ -9,12 +9,12 @@ $('.signup').hover(function(){
 	$(this).removeClass('hovered');
 });
 $('.signup-form').hide();
-$('.loginform').css('height','40vh');
+$('.loginform').css('height','20vw');
 
 $('.signin').click(function(){
 	$('.signup').removeClass('active');
-	$('#error').hide();
-	$('.loginform').css('height','40vh');
+	$('.inp-er').hide();
+	$('.loginform').css('height','20vw');
 
 	$('.signin').addClass('active');
 	$('.signup-form').fadeOut(0,function(){
@@ -24,9 +24,9 @@ $('.signin').click(function(){
 $('.signup').click(function(){
 	$('.signin').removeClass('active');
 	$('.signup').addClass('active');
-	$('#errors').hide();
+	$('.inp-er').hide();
 	$('.loginform').css('transition','1s');
-	$('.loginform').css('height','80vh');
+	$('.loginform').css('height','39vw');
 
 	$('.signin-form').fadeOut(0,function(){
 		$('.signup-form').delay(1000).fadeIn();

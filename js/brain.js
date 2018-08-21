@@ -16,11 +16,11 @@ $(document).ready(function(){
 	$("#up-email").focusout(function() {
 		check_email();if(error_email){
 			$('.inp-er').show();
-			$('.loginform').css('height','90vh');
+			$('.loginform').css('height','44vw');
 			$('#errors').show();
 			$('#errors').html(errors);
 		}else {
-			$('.loginform').css('height','80vh');
+			$('.loginform').css('height','39vw');
 			$('.inp-er').hide();
 			errors ='';
 		}
@@ -29,11 +29,11 @@ $(document).ready(function(){
 		check_password()
 		check_repass();if(error_password){
 			$('.inp-er').show();
-			$('.loginform').css('height','90vh');
+			$('.loginform').css('height','44vw');
 			$('#errors').show();
 			$('#errors').html(errors);
 		}else {
-			$('.loginform').css('height','80vh');
+			$('.loginform').css('height','39vw');
 			$('.inp-er').hide();
 			errors ='';
 		}
@@ -41,11 +41,11 @@ $(document).ready(function(){
 	$("#up-repass").focusout(function() {
 		check_repass();if(error_repass){
 			$('.inp-er').show();
-			$('.loginform').css('height','90vh');
+			$('.loginform').css('height','44vw');
 			$('#errors').show();
 			$('#errors').html(errors);
 		}else {
-			$('.loginform').css('height','80vh');
+			$('.loginform').css('height','39vw');
 			$('.inp-er').hide();
 			errors ='';
 		}
@@ -68,11 +68,11 @@ $(document).ready(function(){
 			error_name = true;
 			if(error_name){
 			$('.inp-er').show();
-			$('.loginform').css('height','90vh');
+			$('.loginform').css('height','44vw');
 			$('#errors').show();
 			$('#errors').html(errors);
 		}else {
-			$('.loginform').css('height','80vh');
+			$('.loginform').css('height','39vw');
 			$('.inp-er').hide();
 			errors ='';
 		};
@@ -95,11 +95,11 @@ $(document).ready(function(){
 			$('#up-email').css('border-bottom','0.1vw solid red');
 			if(error_email){
 			$('.inp-er').show();
-			$('.loginform').css('height','90vh');
+			$('.loginform').css('height','44vw');
 			$('#errors').show();
 			$('#errors').html(errors);
 		}else {
-			$('.loginform').css('height','80vh');
+			$('.loginform').css('height','39vw');
 			$('.inp-er').hide();
 			errors ='';
 		};
@@ -126,12 +126,12 @@ $(document).ready(function(){
 			error_sname = true;
 			if(error_sname){
 			$('.inp-er').show();
-			$('.loginform').css('height','90vh');
+			$('.loginform').css('height','44vw');
 			$('#errors').show();
 			$('#errors').html(errors);
 			
 		}else {
-			$('.loginform').css('height','80vh');
+			$('.loginform').css('height','39vw');
 			$('.inp-er').hide();
 			errors ='';
 		}
@@ -169,11 +169,11 @@ $(document).ready(function(){
             		error_login = false;
             		if(error_login){
 			$('.inp-er').show();
-			$('.loginform').css('height','90vh');
+			$('.loginform').css('height','44vw');
 			$('#errors').show();
 			$('#errors').html(errors);
 		}else {
-			$('.loginform').css('height','80vh');
+			$('.loginform').css('height','39vw');
 			$('.inp-er').hide();
 			errors ='';
 		}
@@ -184,11 +184,11 @@ $(document).ready(function(){
             		error_login = true;
             		if(error_login){
 			$('.inp-er').show();
-			$('.loginform').css('height','90vh');
+			$('.loginform').css('height','44vw');
 			$('#errors').show();
 			$('#errors').html(errors);
 		}else {
-			$('.loginform').css('height','80vh');
+			$('.loginform').css('height','39vw');
 			$('.inp-er').hide();
 			errors ='';
 		};
@@ -202,11 +202,11 @@ $(document).ready(function(){
 		};
 		if(error_login){
 			$('.inp-er').show();
-			$('.loginform').css('height','90vh');
+			$('.loginform').css('height','44vw');
 			$('#errors').show();
 			$('#errors').html(errors);
 		}else {
-			$('.loginform').css('height','80vh');
+			$('.loginform').css('height','39vw');
 			$('.inp-er').hide();
 			errors ='';
 		}
@@ -237,11 +237,11 @@ $(document).ready(function(){
 				error_repass = true;
 				if(error_repass){
 			$('.inp-er').show();
-			$('.loginform').css('height','90vh');
+			$('.loginform').css('height','44vw');
 			$('#errors').show();
 			$('#errors').html(errors);
 		}else {
-			$('.loginform').css('height','80vh');
+			$('.loginform').css('height','39vw');
 			$('.inp-er').hide();
 			error_repass = false;
 		}
@@ -278,11 +278,11 @@ $(document).ready(function(){
 	} else {
 		if(errors){
 			$('.inp-er').show();
-			$('.loginform').css('height','90vh');
+			$('.loginform').css('height','44vw');
 			$('#errors').show();
 			$('#errors').html(errors);
 		} else {
-			$('.loginform').css('height','80vh');
+			$('.loginform').css('height','39vw');
 			$('.inp-er').hide();
 			console.log(error_repass+' '+error_login+' '+error_sname+' '+error_password+' '+error_email+' '+error_name+' ');
 		}
@@ -303,11 +303,11 @@ var login = $('#in-login').val().trim().toLowerCase();
         		success: function(response) {
             		var obj = jQuery.parseJSON(response);
             		if (obj.ans==='0'){
-            			$('.loginform').css('height','50vh');
+            			$('.loginform').css('height','25vw');
 		$('.inp-er').show();
             			$('#error').html('Неправильно введен логин');
             		}	else if (obj.ans==='1') {
-            			$('.loginform').css('height','50vh');
+            			$('.loginform').css('height','25vw');
 		$('.inp-er').show();
             			$('#error').html('Неправильный пароль');
             		} else {location.replace(obj.ans);}
@@ -315,7 +315,7 @@ var login = $('#in-login').val().trim().toLowerCase();
     		});
 
 	} else {
-		$('.loginform').css('height','50vh');
+		$('.loginform').css('height','25vw');
 		$('.inp-er').show();
 		$('#error').html('Заполните поля');
 	}

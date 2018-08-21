@@ -1,4 +1,5 @@
 <?php include 'header2.php' ?>
+<?php if(isset($_SESSION['logged'])): ?>
 <div class="container">
   <div class="make-form">
     <div id="title">Подать объявление</div>
@@ -11,7 +12,7 @@
             <option value="Уральск">Уральск</option>
             <option value="Шымкент">Шымкент</option>
             <option value="Актау">Актау</option>
-            <option value="Другой">Другой</option>
+            <option value="other">Другой</option>
           </select>
       </div>
       <div class="inp" style="display: none;">
@@ -25,8 +26,8 @@
       <div class="make-filter">
         <label for="city" class="filter-label">Машина</label>
         <select name="car" value="Выберете город" id="make-filter">
-            <option selected="true" value="Нет">Нет</option>
-            <option  value="Есть">Есть</option>
+            <option selected="true" value="false">Нет</option>
+            <option  value="true">Есть</option>
           </select>
       </div>
       <div class="make-filter">
@@ -38,22 +39,28 @@
           </select>
       </div>
       <div class="inp">
-        <input type="text" name="info" id="i-info" required>
-        <label class="inp-label">Информация</label>
+        <div class="make-info" contenteditable="true">Информация о вас</div>
+       
       </div>
-      <div class="make-filter">
+      <div class="make-filter inv"></div>
+      <div class="make-filter ">
         <label for="photo" class="filter-label">Фото</label>
         <div class="photo-container">
-          <div class="photo"><span class="plus">+</span></div>
-          <div class="photo"><span class="plus">+</span></div> 
+          <div class="photo"><span><div><span>+</span></div></span></div>
+          <div class="photo"><span><div><span>+</span></div></span></div>
+          <input type="file" class="hidden" name="file1" id="file1">
+          <input type="file" class="hidden" name="file2" id="file2">
         </div>
       </div>
 
-      <div class="up-submit"><span>Отправить</span></div>
+      <div onclick="upload($('#id').val());" class="make-filter make-button inv"><span>Отправить</span></div>
   </div>
 </div>
 
 <?php include 'footer.php' ?>
 </body>
-<script src="js/js.js"></script>
-<script src="js/brain.js"></script>
+<script src="js/make.js"></script>
+<?php else: echo'<meta http-equiv="refresh" content="2; url=http://as">'; ?>
+ Зарегестрируйтесь или войдите в систему
+
+<?php endif ?>

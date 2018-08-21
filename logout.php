@@ -3,6 +3,6 @@
 	$_SESSION['id'] = '';
 
 	header('Location: /index.php');
-
+	setcookie ("id", "", time() - 3600);
  ?>
 

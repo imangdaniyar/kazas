@@ -4,8 +4,9 @@
 	height: 6.5vw;
 	box-sizing: border-box;
 	z-index: 999;
-	transition: 0.5s;
+	transition: 0.5s;	
 }
+
 .header2{
 	width: 100%;
 	position: relative;
@@ -13,7 +14,6 @@
 	box-sizing: border-box;
 	z-index: 999;
 	transition: 0.5s;
-	margin: 0;
 }
 .logo{
 	width: 30%;
@@ -62,12 +62,12 @@
 	}
 .draw{
 	width: 50%;
-	height: 200%;
+	height: 100%;
 	list-style: none;
 }
 .draw1{
 	width: 100%;
-	height: 50%;
+	height: 100%;
 	position: relative;
 }
 .draw2{
@@ -76,11 +76,17 @@
 	position: relative;
 	display: none;
 
+}.draw:hover{
+	height: 200%;
+}
+.draw:hover .draw1{
+	height: 50%;
 }
 .draw:hover  .draw2{
 	display: block;
 
 }
+
 
 .draw1:hover,.draw2:hover{
 	background-color: #007AFF;
