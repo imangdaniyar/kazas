@@ -1,0 +1,88 @@
+.d-profile{
+	display: grid;
+	grid-template-columns: 30% 70%;
+	height: 30vw;
+	width: 100%;
+	position: relative;
+}
+.d-right{
+	background-color: white;
+	box-shadow: 0 0 1vw gray;
+}
+.d-title{
+	padding: 1.5%;
+	width: 97%;
+	font-size: 1.5vw;
+	border:0;
+	outline: 0;
+	background-color: rgb(0,0,0,0);
+	color: #2C84C0;
+	border-bottom: 0.1vw solid #2C84C0;
+}
+.d-card{
+	width: 91%;
+	position: relative;
+	margin-top: 3%;
+}
+.d-personal{
+	display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
+	width: 100%;
+	position: relative;
+	background-color: #F7F7F7;
+	border-left: 0.3vw solid #2C84C0;
+	margin-left: 5%;
+	border-radius: 0.3vw;
+}
+
+.d-info{
+	padding: 0.5vw;
+}
+.d-photo{
+		
+}
+
+.d-left{
+	background-color: #3B5998;
+	box-shadow: 0 0 1vw gray;
+}
+.d-ph{
+	min-height: 35vw;
+	width: 100%;
+	position: relative;
+}
+.d-ph-name{
+	z-index: 999;
+	position: absolute;
+	bottom: 3%;
+	left: 5%;
+	color: white;
+	font-size: 1.3vw;
+}
+.personal-podrobno{
+	width: 98%;
+	position: relative;
+	background-color: #F7F7F7;
+	border-left: 0.3vw solid #2C84C0;
+	margin-left: 5%;
+	border-radius: 0.3vw;
+	padding: 1%;
+	margin-top: 5%;
+}
+.podrobno{
+	font-size: 1.2vw;
+}
+.podrobno-info{
+	font-size: 1vw;
+	margin-top: 1%;
+}
+.lesson{
+	font-size: 1vw;
+	margin-top: 1%;
+}
+.lessons{
+	margin-top: 1%;
+}
+.l-chapter{
+	cursor: pointer;
+}
