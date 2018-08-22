@@ -1,4 +1,9 @@
 <?php include 'header2.php' ?>
+<?php if(isset($_SESSION['logged'])) :?>
+<?php $user = R::findOne('users' , 'id = ?', array($_COOKIE['id']));
+    $usera = R::findOne('insts' , 'uid = ?', array($_COOKIE['id']));
+    ?>
+<?php endif; ?>
 <div class="container">
   <div class="u-profile">
   	<div class="p-left">
@@ -11,25 +16,39 @@
   				<i class="fa fa-user"></i> Имя
 	  			</div>
 
-	  			<div class="">Daniyar</div>
+	  			<div class=""><?php echo $user->name ?></div>
 	  			
 	  			<div class="p-info" id="p-sname">
 	  				<i class="fa fa-users"></i> Фамилия
 	  			</div>
 	  			
-	  			<div class="">Imangaliyev</div>
+	  			<div class=""><?php echo $user->sname ?></div>
 
 	  			<div class="p-info" id="p-car">
 	  				<i class="fa fa-car"></i> Машина
 	  			</div>
 	  			
-	  			<div class="">Есть</div>
+	  			<div class="">
+	  				<?php if ($usera->car == 1){ 
+	  					echo 'Есть'; }
+	  				else {
+	  					echo 'Нет';}
+					?>
+					</div>	  				 
 	  			
 	  			<div class="p-info" id="p-exp">
 	  				<i class="fa fa-address-card"></i> Стаж вождения
 	  			</div>
 	  			
-	  			<div class="">18 лет</div>
+	  			<div class="">
+	  				<?php echo $usera->exp ?>
+	  				<?php if($usera->exp < 5 || ($usera->exp > 21 && $usera->exp < 25) ) {
+	  					echo 'года';
+	  				} elseif ($usera->exp == 1 || $usera->exp == 21) {
+	  					echo 'год';
+	  				} else {
+	  					echo 'лет';
+	  				} ?></div>
 
 	  			<div class="p-info" id="p-exp">
 	  				<i class="fa fa-mobile"></i> Телефон
@@ -41,7 +60,7 @@
 	  				<i class="fa fa-caret-square-down"></i> Подробно
 	  			</div>	
 	  			
-	  			<div class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque fugit .</div>
+	  			<div class=""><?php echo $usera->info ?></div>
   			</div>
   			<div class="p-photo">
   				<img src="slider/slide3.jpg" alt="" style="height:100%; width: 100%;">
