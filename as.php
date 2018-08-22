@@ -1,4 +1,12 @@
-<?php include 'header2.php'; ?>
+<?php include 'header2.php';
+if($_GET){
+  $id = $_GET['id'];
+  $as = R::findOne('autos', 'id = ?', [$id]);
+  $images = R::findAll('images', 'purpose = "a" AND pid = ?',[$id]);
+}else{
+  echo'<meta http-equiv="refresh" content="0; url=http://as">';;
+}
+ ?>
 	
 	
   <div  class="container" style="margin-top: 0vw; width: 100%;">
@@ -6,21 +14,21 @@
       Автошкола 
       <br>
       <span style="font-size: 5vw;">
-        Самат
+        <?php echo $as->name ?>
       </span>
     </div>
     <div class="swiper-container">
     <!-- Additional required wrapper -->
       <div class="swiper-wrapper">
         <!-- Slides -->
-          <div class="swiper-slide">
-            <img class="slide-image" src="slider/slide1.jpg" alt="">
-        
-
-          </div>
-          <div class="swiper-slide"><img class="slide-image" src="slider/slide2.jpg" alt=""></div>
-
-          <div class="swiper-slide"><img class="slide-image" src="slider/slide3.jpg" alt=""></div>
+        <?php if($images){
+          foreach ($images as $image) {
+            echo ('<div class="swiper-slide"><img class="slide-image" src="images/'.$image->name.'.jpg" alt=""></div>');
+          }
+        }else{
+          echo('<div class="swiper-slide"><img class="slide-image" src="images/noimage.jpg" alt=""></div>');
+        } ?>
+          
         
       </div>
     <!-- If we need pagination -->
@@ -34,16 +42,19 @@
         <div class="as-info">
           <span style="font-size: 1.5vw;">Об Автошколе</span>
           <div> 
-            Автошкола "Орал"(прежнее название - автошкола "Союза Водителей") существует с 1974 года.За время работы мы уверенно лидируем среди автошкол города Уральска. Сплоченный коллектив преподавателей и инструкторов под руководством директора Загранюк А.В. всегда заботится о том,чтобы наши выпускники пополняли ряды думающих и вежливых водителей,знающих ПДД и уверенно управляющих своим автомобилем.
+            <?php echo $as->info ?>
           </div>
           <div>
-            Адрес: пр. Богенбай Батыра 73/1,офис 310,г. Астана
+            Город:  <?php echo $as->city ?>
           </div>
           <div>
-            Контакты:  +77172-49-30-97,+7701-707-52-74
+            Адрес: <?php echo $as->adress ?>
           </div>
           <div>
-            Сайт: zarulemkz.kz;
+            Контакты:  <?php echo $as->contacts ?>
+          </div>
+          <div>
+            Сайт: <a href="https://<?php echo $as->site ?>"><?php echo $as->site ?></a>
           </div>
           
         </div>
@@ -64,22 +75,7 @@
 	 <?php include 'footer.php'; ?>
 </body>
   <script src="js/swiper.js"></script>
-  	<script>$(document).ready(function(){
-$("#menu").on("click","a", function (event) {
-//отменяем стандартную обработку нажатия по ссылке
-event.preventDefault();
-
-//забираем идентификатор бока с атрибута href
-var id = $(this).attr('href'),
-
-//узнаем высоту от начала страницы до блока на который ссылается якорь
-top = $(id).offset().top;
-bottom = $('#menu').height()+5;
-//анимируем переход на расстояние - top за 1500 мс
-$('body,html').animate({scrollTop: top-bottom}, 800);
-});
-});
-</script></script>
+  
 
 <script>
     $(document).ready(function () {
@@ -108,11 +104,6 @@ $('body,html').animate({scrollTop: top-bottom}, 800);
   });
     });
   </script>
-  <script>
   
-  $(window).on("scroll", function() {
-    if ($(window).scrollTop() > 50) { $('.header').addClass('fixed');   }
-          else { $('.header').removeClass('fixed');  }
-    });     </script>
 
 </html>

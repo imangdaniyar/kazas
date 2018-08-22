@@ -82,6 +82,7 @@ if ( !R::testConnection() )
 
 			if($insts){
 				foreach ($insts as $inst) {
+					$user = R::findOne('users','id = ?',[$inst->uid]);
 				$image = R::findOne('images','purpose = "i" AND pid = ?',[$inst->id]);
 				if($image){
 					$img = $image->name;
@@ -101,9 +102,10 @@ if ( !R::testConnection() )
 				echo('<a href="ins.php?id='.$inst->id.'"><div class="inst-card">
 				<div class="card-container">
 					<div class="card-row lp"><img class="card-picture" src="/images/'.$img.'" alt=""></div>
+					<div class="card-row div"><div class="c-col1 fl">'.$user->name.' </div><div class="c-col2 fl">'.$user->sname.'</div></div>
 					<div class="card-row div"><div class="c-col1">Город: </div><div class="c-col2">'.$inst->city.'</div></div>
 					<div class="card-row div"><div class="c-col1">Стаж работы: </div><div class="c-col2">'.$inst->exp.' лет</div></div>
-					<div class="card-row div"><div class="c-col1">Своя машина: </div><div class="c-col2">'.$car.'</div></div>
+					
 				</div>
 			</div></a>');
 			}

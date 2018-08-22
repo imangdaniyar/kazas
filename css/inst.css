@@ -17,6 +17,12 @@
 	padding: 1vw;
 	margin-right: 1vw;
 }
+.fr{
+	text-align: right;
+}
+.fl{
+	text-align: left;
+}
 
 
 .give{
@@ -93,7 +99,7 @@
 }
 .card-container{
 	grid-template-columns: 100%;
-	grid-template-rows: 50% 16% 16% 16%;
+	grid-template-rows: 40% 16% 16% 16%;
 	height: 12vw;
 }
 .card-picture{
@@ -107,7 +113,8 @@
 	height: 100%;
 }
 .lp{
-	padding:0.5vw; 
+	padding:0.5vw;
+	height: 90%; 
 }
 .div{
 	grid-template-columns: 50%;
