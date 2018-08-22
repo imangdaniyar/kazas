@@ -9,9 +9,10 @@ function search_inst(lang,car,exp,city) {
         	success: function(response) {
         		console.log(response);
         		if(response =="no"){
-        			$('.grid-inst').html('<span style="width:100%; height:50vh;">Результатов нет</span>');
+        			$('.grid-inst').html('<span style="width:100%; height:50vh;	">Результатов нет</span>');
         		}else{
-        			$('.grid-inst').html(response);
+        			$('.grid-inst').html(response)
+        			
         		}
         		
         		

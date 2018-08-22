@@ -7,6 +7,7 @@
 	grid-gap: 2vw;
 	width: 60%;
 	position: relative;
+	
 }
 .mini{
 	width: 30%;
@@ -80,12 +81,15 @@
 	border:0.1vw solid #007aff;
 	overflow: hidden;
 	cursor: pointer;
-	transition: 0.5s;
+	transition: 0.3s;
 	padding-bottom: 0.5vw;
+	box-shadow: 0.8vw 0.8vw 2vw;
+	color:#395ABD;
+
 }
 .inst-card:hover{
 	opacity:0.5;
-	transition: 0.5s;
+	transition: 0.3s;
 }
 .card-container{
 	grid-template-columns: 100%;
@@ -101,6 +105,9 @@
 	border-bottom: 0.1vw solid #007aff;
 	padding: 1vw;
 	height: 100%;
+}
+.lp{
+	padding:0.5vw; 
 }
 .div{
 	grid-template-columns: 50%;

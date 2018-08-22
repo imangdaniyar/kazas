@@ -72,7 +72,7 @@
 				}
 				echo('<a href="ins.php?id='.$inst->id.'"><div class="inst-card">
 				<div class="card-container">
-					<div class="card-row"><img class="card-picture" src="/images/'.$img.'" alt=""></div>
+					<div class="card-row lp"><img class="card-picture" src="/images/'.$img.'" alt=""></div>
 					<div class="card-row div"><div class="c-col1">Город: </div><div class="c-col2">'.$inst->city.'</div></div>
 					<div class="card-row div"><div class="c-col1">Стаж работы: </div><div class="c-col2">'.$inst->exp.' лет</div></div>
 					<div class="card-row div"><div class="c-col1">Своя машина: </div><div class="c-col2">'.$car.'</div></div>
