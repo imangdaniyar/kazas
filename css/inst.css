@@ -84,13 +84,13 @@
 }
 .inst-card{
 	border-radius: 2vw;
-	border:0.1vw solid #007aff;
+	border:0.1vw solid gray;
 	overflow: hidden;
 	cursor: pointer;
 	transition: 0.3s;
 	padding-bottom: 0.5vw;
 	box-shadow: 0.8vw 0.8vw 2vw;
-	color:#395ABD;
+	color:gray;
 
 }
 .inst-card:hover{

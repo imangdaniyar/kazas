@@ -6,6 +6,20 @@ R::setup( 'mysql:host=127.0.0.1;dbname=kazas','root', '' );
 if ( !R::testConnection() )
 {
         exit ('Нет соединения с базой данных');
+}else{
+	date_default_timezone_set('Europe/Moscow');
+	$insts = R::findAll('insts','active = "1"');
+	foreach ($insts as $inst) {
+		$date = new DateTime($inst->date);
+		$date->add(new DateInterval('P31D'));
+		$tmp_date1 =  date('d.m.Y');
+		$tmp_date2 = $date->format('d.m.Y');
+		if(strtotime($tmp_date1) >= strtotime($tmp_date2)){
+			$cat = R::load('insts', $inst->id);
+			$cat->active = '0';
+			R::store($cat);
+		}
+	}
 }
 
 ?>

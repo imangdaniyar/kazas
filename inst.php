@@ -1,5 +1,5 @@
 <?php include 'header2.php' ;
-	$insts = R::findAll('insts','ORDER BY date DESC');
+	$insts = R::findAll('insts',' active = "1" ORDER BY date DESC');
 ?>
 	<div class="container">
 		
@@ -71,7 +71,7 @@
 				}else if($inst->city == 'other'){
 					$inst->city = 'Нет в списке';
 				}
-				echo('<a href="ins.php?id='.$inst->id.'"><div class="inst-card">
+				echo('<a href="driver.php?id='.$inst->id.'"><div class="inst-card">
 				<div class="card-container">
 					<div class="card-row lp"><img class="card-picture" src="/images/'.$img.'" alt=""></div>
 					<div class="card-row div"><div class="c-col1 fl">'.$user->name.' </div><div class="c-col2 fl">'.$user->sname.'</div></div>

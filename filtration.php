@@ -45,36 +45,36 @@ if ( !R::testConnection() )
 		if($car == 'all'){
 			if($city == 'all'){
 				if($lang == 'b'){
-					$insts = R::findAll('insts','exp >= ? ORDER BY date DESC',[$exp]);
+					$insts = R::findAll('insts','active = "1" AND exp >= ?  ORDER BY date DESC',[$exp]);
 				}else{
 					#lang
-					$insts = R::findAll('insts','exp >= ? AND (lang = ? OR lang ="b") ORDER BY date DESC',[$exp,$lang]);
+					$insts = R::findAll('insts','active = "1" AND exp >= ? AND (lang = ? OR lang ="b") ORDER BY date DESC',[$exp,$lang]);
 				}
 			}else{
 				#city
 				if($lang == 'b'){
-					$insts = R::findAll('insts','exp >= ? AND (city =? OR city = "all") ORDER BY date DESC',[$exp,$city]);
+					$insts = R::findAll('insts','active = "1" AND exp >= ? AND (city =? OR city = "all") ORDER BY date DESC',[$exp,$city]);
 				}else{
 					#lang
-					$insts = R::findAll('insts','exp >= ? AND (lang = ? OR lang ="b") AND (city = ? OR city = "all") ORDER BY date DESC',[$exp,$lang,$city]);
+					$insts = R::findAll('insts','active = "1" AND exp >= ? AND (lang = ? OR lang ="b") AND (city = ? OR city = "all") ORDER BY date DESC',[$exp,$lang,$city]);
 				}
 			}
 		}else{
 			#car
 			if($city == 'all'){
 				if($lang == 'b'){
-					$insts = R::findAll('insts','exp >= ? AND car = ? ORDER BY date DESC',[$exp,$car]);
+					$insts = R::findAll('insts','active = "1" AND exp >= ? AND car = ? ORDER BY date DESC',[$exp,$car]);
 				}else{
 					#lang
-					$insts = R::findAll('insts','exp >= ? AND (lang = ? OR lang ="b") AND car = ? ORDER BY date DESC',[$exp,$lang,$car]);
+					$insts = R::findAll('insts','active = "1" AND exp >= ? AND (lang = ? OR lang ="b") AND car = ? ORDER BY date DESC',[$exp,$lang,$car]);
 				}
 			}else{
 				#city
 				if($lang == 'b'){
-					$insts = R::findAll('insts','exp >= ? AND (city =? OR city = "all") AND car = ? ORDER BY date DESC',[$exp,$city,$car]);
+					$insts = R::findAll('insts','active = "1" AND exp >= ? AND (city =? OR city = "all") AND car = ? ORDER BY date DESC',[$exp,$city,$car]);
 				}else{
 					#lang
-					$insts = R::findAll('insts','exp >= ? AND (lang = ? OR lang ="b") AND (city = ? OR city = "all") AND car = ? ORDER BY date DESC',[$exp,$lang,$city,$car]);
+					$insts = R::findAll('insts','active = "1" AND exp >= ? AND (lang = ? OR lang ="b") AND (city = ? OR city = "all") AND car = ? ORDER BY date DESC',[$exp,$lang,$city,$car]);
 				}
 			}
 
@@ -99,7 +99,7 @@ if ( !R::testConnection() )
 				}else if($inst->city == 'other'){
 					$inst->city = 'Нет в списке';
 				}
-				echo('<a href="ins.php?id='.$inst->id.'"><div class="inst-card">
+				echo('<a href="driver.php?id='.$inst->id.'"><div class="inst-card">
 				<div class="card-container">
 					<div class="card-row lp"><img class="card-picture" src="/images/'.$img.'" alt=""></div>
 					<div class="card-row div"><div class="c-col1 fl">'.$user->name.' </div><div class="c-col2 fl">'.$user->sname.'</div></div>
