@@ -1,5 +1,5 @@
 <?php include 'header2.php' ;
-	$insts = R::findAll('insts');
+	$insts = R::findAll('insts','ORDER BY date DESC');
 ?>
 	<div class="container">
 		
@@ -25,7 +25,7 @@
 					</select></div>
 				<div class="filter">
 					<label for="city" class="filter-label">Стаж интсруктора</label>
-					<div><input style="color:#000;" type="number" min="0" value="0" id="inst-exp"> год(-а(лет))</div>
+					<div><input style="color:#000; height: 0.7vw" type="number" min="0" value="0" id="inst-exp"> лет</div>
 				</div>
 				<div class="filter">
 					<label for="city" class="filter-label">Своя машина</label>
@@ -80,14 +80,7 @@
 			</div></a>');
 			}
 		 ?>
-			<a href="ins.php?id="><div class="inst-card">
-				<div class="card-container">
-					<div class="card-row"><img class="card-picture" src="/slider/slide1.jpg" alt=""></div>
-					<div class="card-row div"><div class="c-col1">Город: </div><div class="c-col2">Астана</div></div>
-					<div class="card-row div"><div class="c-col1">Стаж работы: </div><div class="c-col2">8 лет</div></div>
-					<div class="card-row div"><div class="c-col1">Своя машина: </div><div class="c-col2">Да</div></div>
-				</div>
-			</div></a>
+			
 			
 		</div>
 	</div>

@@ -41,8 +41,44 @@ if ( !R::testConnection() )
 		$lang = $_POST['lang'];
 		$city = $_POST['city'];
 		$car = $_POST['car'];
-		$exp = $_POST['exp'];
-		
+		$exp = (int)$_POST['exp'];
+		if($car == 'all'){
+			if($city == 'all'){
+				if($lang == 'b'){
+					$insts = R::findAll('insts','exp >= ? ORDER BY date DESC',[$exp]);
+				}else{
+					#lang
+					$insts = R::findAll('insts','exp >= ? AND lang = ? ORDER BY date DESC',[$exp,$lang]);
+				}
+			}else{
+				#city
+				if($lang == 'b'){
+					$insts = R::findAll('insts','exp >= ? AND (city =? OR city = "all") ORDER BY date DESC',[$exp,$city]);
+				}else{
+					#lang
+					$insts = R::findAll('insts','exp >= ? AND lang = ? AND (city = ? OR city = "all") ORDER BY date DESC',[$exp,$lang,$city]);
+				}
+			}
+		}else{
+			#car
+			if($city == 'all'){
+				if($lang == 'b'){
+					$insts = R::findAll('insts','exp >= ? AND car = ? ORDER BY date DESC',[$exp,$car]);
+				}else{
+					#lang
+					$insts = R::findAll('insts','exp >= ? AND lang = ? AND car = ? ORDER BY date DESC',[$exp,$lang,$car]);
+				}
+			}else{
+				#city
+				if($lang == 'b'){
+					$insts = R::findAll('insts','exp >= ? AND (city =? OR city = "all") AND car = ? ORDER BY date DESC',[$exp,$city,$car]);
+				}else{
+					#lang
+					$insts = R::findAll('insts','exp >= ? AND lang = ? AND (city = ? OR city = "all") AND car = ? ORDER BY date DESC',[$exp,$lang,$city,$car]);
+				}
+			}
+
+		}
 
 			if($insts){
 				foreach ($insts as $inst) {

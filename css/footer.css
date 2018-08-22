@@ -6,8 +6,7 @@
 	z-index: 999;
 	background-color: #162034;
 	padding: 1vw;
-	margin: 0;
-	margin-top: -10vw;
+	margin-top:10vw;
 }
 .footer-grid{
 	display: grid;
@@ -21,6 +20,8 @@
 	margin: auto;
 	color: #395ABD;
 	margin-top: 7%;
+	position: absolute;
+	left:10%;
 }
 .footer-card{
 	font-family: 'Montserrat Alternates', sans-serif;
