@@ -27,6 +27,7 @@ if ( !R::testConnection() )
 	<link rel="stylesheet" href="css/footer.css">
 	<link rel="stylesheet" href="css/auth.css">
 	<link rel="stylesheet" href="css/inst.css">
+	<link rel="stylesheet" href="css/driver.css">
 	<link rel="stylesheet" href="css/profile.css">
 	<link rel="stylesheet" href="css/make.css">
 	<link rel="stylesheet" href="css/as.css">
