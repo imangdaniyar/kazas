@@ -4,6 +4,7 @@
 	height: 30vw;
 	width: 100%;
 	position: relative;
+	text-decoration: none;
 }
 .p-left{
 	background-color: #F6F3F7;
@@ -20,12 +21,19 @@
 	color: #3D5D94;
 	border-bottom: 0.1vw solid #3D5D94;
 }
+.r{
+	border-bottom: 0.1vw solid #F6F3F7;
+	color:#F6F3F7;
+	width: 91%;
+}
 .p-card{
 	display: grid;
 	grid-template-columns: 50% 50%;
 	width: 96%;
 	position: relative;
 	margin-top: 1vw;
+
+
 }
 .p-personal{
 	display: grid;
@@ -44,4 +52,90 @@
 .p-right{
 	background-color: #3B5998;
 	box-shadow: 0 0 1vw gray;
+}
+.p-insts{
+	display: grid;
+	grid-template-rows: 50% 50%;
+	width: 100%;
+	height: 90%;
+	position: relative;
+	color:white;
+	
+}
+.p-active{
+	border-bottom: 0.1vw solid silver;
+	height: 100%;
+	width: 100%;
+	overflow-y: scroll;
+}
+.p-dis{
+
+	height: 100%;
+	width: 100%;
+	overflow-y: scroll;
+}
+.p-inst-active{
+	width: 90%;
+	margin:auto;
+	height: 2vw;
+	border:0.1vw solid #82FA38;
+	color:#fff;
+	font-size: 1vw;
+	padding: 0.3vw;
+	margin-top: 0.3vw;
+	border-radius: 2vw;
+	display: grid;
+	grid-template-columns: 70% 15% 15%;
+	width: 90%;
+	position: relative;
+	cursor: pointer;	
+	text-align: center;	
+}
+
+.pia-edit{
+	border-left: 0.1vw solid silver;
+	font-size: 1.5vw;
+	color:white;
+
+}
+.pia-delete{
+	
+}
+.pia-activate{
+	border-left: 0.1vw solid silver;
+	font-size: 1.5vw;
+}
+.p-inst-dis{
+	width: 90%;
+	margin:auto;
+	height: 2vw;
+	border:0.1vw solid red;
+	color:#fff;
+	font-size: 1vw;
+	padding: 0.3vw;
+	margin-top: 0.3vw;
+	border-radius: 2vw;
+	display: grid;
+	grid-template-columns: 55% 15% 15% 15%;
+	width: 90%;
+	position: relative;
+	cursor: pointer;	
+	text-align: center;	
+}
+.p-label{
+	font-size: 1vw;
+
+}
+.p-label:hover{
+	color:gray;
+}
+.p{
+	border-left: 0.1vw solid silver;
+	font-size: 1.5vw;
+}
+.p:hover{
+	color:gray;
+}
+.pia-down{
+	font-size: 1.8vw;
 }

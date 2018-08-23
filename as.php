@@ -4,7 +4,7 @@ if($_GET){
   $as = R::findOne('autos', 'id = ?', [$id]);
   $images = R::findAll('images', 'purpose = "a" AND pid = ?',[$id]);
 }else{
-  echo'<meta http-equiv="refresh" content="0; url=http://as">';;
+  echo'<meta http-equiv="refresh" content="0; url=http://as">';
 }
  ?>
 	
