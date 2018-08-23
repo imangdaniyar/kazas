@@ -27,7 +27,7 @@
         <label class="inp-label">Другой город</label>
       </div>
       <div class="inp">
-        <input type="number" name="exp" id="i-exp" min="0" max="80" required>
+        <input type="number" value="0" name="exp" id="i-exp" min="0" max="80" required>
         <label class="inp-label">Стаж вождения</label>
       </div>
       <div class="make-filter">
@@ -66,7 +66,7 @@
 
 <?php include 'footer.php' ?>
 </body>
-<script src="js/make.js"></script>
+<script src="js/make.js?123"></script>
 <?php else: echo'<meta http-equiv="refresh" content="2; url=http://as">'; ?>
  Зарегестрируйтесь или войдите в систему
 

@@ -22,7 +22,7 @@
 	background-color: #395ABD;
 	padding: 1vw;
 	color: white;
-
+	
 }
 .as-info div{
 	margin-top: 1vw;
@@ -31,19 +31,30 @@
 	background-color: #162034;
 	padding: 1vw;
 	color: white;
+	max-height: 18.55vw;
+	overflow-y:scroll; 
+
 }
 .services{
 	margin: 0;
 	padding: 0;
 }
-.service{
+.comment{
 	list-style: none;
 	background-color: #395ABD;
-	margin-top: 1vw;
+	margin:1vw auto;
 	padding: 0.5vw;
-	width: 17vw;
+	width: 98%;
 	border-radius: 0.5vw;
 	transition: 0.5s;
+	min-height: 5vw;
+	display: grid;
+	grid-template-rows: 10% 90%;
+}
+.comment span{
+	color:lightgray;
+	border-bottom: 0.1vw solid silver;
+	margin-bottom: 0.5vw;
 }
 .service:hover{
 	transition: 0.5s;

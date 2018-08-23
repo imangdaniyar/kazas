@@ -5,7 +5,11 @@
     $active_insts = R::findAll('insts','uid = ? AND active="1"',[$_COOKIE['id']]);
     $dis_insts = R::findAll('insts','uid = ? AND active!="1"',[$_COOKIE['id']]);
     ?>
-<?php endif; ?>
+
+	
+	
+
+
 <div class="container">
   <div class="u-profile">
   	<div class="p-left">
@@ -95,7 +99,8 @@
   			</div>
   			<div class="p-dis">
   				<span>Не активные</span><br>
-  				<div class="fulll"><?php foreach ($dis_insts as $inst) {
+  				<div class="fulll"></div>
+  				<?php foreach ($dis_insts as $inst) {
   					
   					echo ('<div class="p-inst-dis">
   					<a href="driver.php?id='.$inst->id.'"><span class="p-label">Не активно</span></a>
@@ -103,8 +108,7 @@
   					<div class="pia-edit p"><a style="color:white;" href="edit.php?id='.$inst->id.'"><i class="fas fa-edit"></i></a></div>
   					<div class="pia-delete p"> <i onclick="delete_inst('.$inst->id.')" class="fas fa-trash"></i></div>
   				</div>');
-  				} ?></div>
-  				
+  				} ?>
   				
   			</div>
   		</div>
@@ -115,3 +119,5 @@
 <?php include 'footer.php' ?>
 </body>
 <script src="js/profile.js"></script>
+<?php else : echo'<meta http-equiv="refresh" content="0; url=http://as">'; ?>
+<?php endif; ?>

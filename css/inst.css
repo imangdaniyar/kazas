@@ -10,12 +10,13 @@
 	
 }
 .mini{
-	width: 30%;
+	width: 26%;
 	height: 70vw;
 	float: left;
 	position: relative;
 	padding: 1vw;
 	margin-right: 1vw;
+	margin-left: 2vw;
 }
 .fr{
 	text-align: right;
@@ -39,7 +40,7 @@
 	padding: 1vw;
 	background-color: #007aff;
 	font-family: 'Montserrat Alternates', sans-serif;
-	font-size: 1.5vw;
+	font-size: 1.3vw;
 	border-radius: 2vw;
 	color:#fff;
 	cursor: pointer;
@@ -112,7 +113,7 @@ font-family: 'Montserrat Alternates', sans-serif;
 	border-radius: 2vw 2vw 0 0;
 }
 .card-row{
-	border-bottom: 0.1vw solid #007aff;
+	border-bottom: 0.1vw solid gray;
 	padding: 1vw;
 	height: 100%;
 }

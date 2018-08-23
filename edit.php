@@ -1,10 +1,16 @@
 <?php include 'header2.php' ?>
-<?php if($_GET){
-  $id = $_GET['id'];
-  $insts = R::findOne('insts', 'id = ?',[$id]);
+
+<?php if(isset($_SESSION['logged'])):
+	$id = $_GET['id'];
+$insts = R::findOne('insts', 'id = ?',[$id]);
   $user = R::findOne('users', 'id = ?', (array($insts->uid)));
+ if($_COOKIE['id']==$user->id):?>
+
+<?php if($_GET['id']){
+	
+  
 }else{
-  echo'<meta http-equiv="refresh" content="0; url=http://as">';;
+  echo'<meta http-equiv="refresh" content="0; url=http://as">';
 } ?>
 <div class="container">
   <div class="d-profile">
@@ -39,8 +45,8 @@
 	  			
 	  			<div class="d-info">
 	  				<select class="d-edit" name="Машина" id="e-car">
-	  					<option value="1" selected=""true>Есть</option>
-	  					<option value="0">Нет</option>
+	  					<option value="1" <?php if($insts->car == "1"):echo'selected="true"'; endif ?> true>Есть</option>
+	  					<option value="0" <?php if($insts->car == "0"):echo'selected="true"'; endif ?>>Нет</option>
 	  				</select>
 					</div>	  				 
 	  			
@@ -58,7 +64,16 @@
 	  			</div>
 	  			
 	  			<div class="d-info">
-	  				<input class="d-edit" type="text" value="<?php echo $insts->city ?>" id="e-city"></div>
+	  				<select name="city" value="Выберете город" id="e-city">
+            				<option <?php if($insts->city == "all"):echo'selected="true"'; endif ?> value="all">Все</option>
+            				<option <?php if($insts->city == "Астана"):echo'selected="true"'; endif ?>  value="Астана">Астана</option>
+            				<option <?php if($insts->city == "Алматы"):echo'selected="true"'; endif ?> value="Алматы">Алматы</option>
+            				<option <?php if($insts->city == "Уральск"):echo'selected="true"'; endif ?> value="Уральск">Уральск</option>
+            				<option <?php if($insts->city == "Шымкент"):echo'selected="true"'; endif ?> value="Шымкент">Шымкент</option>
+            				<option <?php if($insts->city == "Актау"):echo'selected="true"'; endif ?> value="Актау">Актау</option>
+            				<option <?php if($insts->city == "other"):echo'selected="true"'; endif ?> value="other">Другой</option>
+          			</select>
+	  			</div>
 	  			
 	  			<div class="d-info" id="d-info">
 	  				<i class="fa fa-envelope"></i> E-mail
@@ -72,7 +87,7 @@
 	  			</div>	
 	  			
 	  			<div class="d-info">
-	  				<input type="phone" class="d-edit" value="<?php echo $inists->phone?>" id="e-phone">
+	  				<input type="phone" class="d-edit" value="<?php echo $user->phone?>" id="e-phone">
 	  			</div>
 	  			<div class="d-info" id="d-info">
 	  				<i class="fa fa-envelope"></i> Язык
@@ -80,9 +95,9 @@
 	  			
 	  			<div class="d-info">
 	  				<select class="d-edit" name="Язык" id="e-lang" >
-	  					<option value="k" selected=""true>Казахский</option>
-	  					<option value="r">Русский</option>
-	  					<option value="b">Оба</option>
+	  					<option value="k" <?php if($insts->lang == "k"):echo'selected="true"'; endif ?>>Казахский</option>
+	  					<option value="r" <?php if($insts->lang == "r"):echo'selected="true"'; endif ?>>Русский</option>
+	  					<option value="b" <?php if($insts->lang == "b"):echo'selected="true"'; endif ?>>Оба</option>
 	  				</select>
 	  				
 	  			</div>
@@ -92,7 +107,7 @@
   					<i class="fa fa-envelope"></i> Подробно
   				</div>
   				<div class="podrobno-info">
-					<div class="d-edit" id="e-info" contenteditable="true" style="white-space: pre;"></div>
+					<div class="d-edit" id="e-info" contenteditable="true" style="white-space: pre;"><?php echo($insts->info); ?></div>
 				</div>
   			</div>
   			
@@ -102,9 +117,13 @@
   	</div>
   	
   </div>
+  <input type="text" class="hidden" id="getid" value="<?php echo $id ?>">
 </div>
 
-<?php include 'footer.php' ?>
+<?php include 'footer.php'; ?>
 </body>
-<script src="js/js.js"></script>
-<script src="js/brain.js"></script>
+<script src="js/edit.js"></script>
+<?php 
+else : echo'<meta http-equiv="refresh" content="0; url=http://as">'; 
+ endif;
+ endif; ?>

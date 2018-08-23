@@ -60,18 +60,20 @@ if($_GET){
         </div>
 
         <div class="as-services">
-          <span style="font-size: 1.5vw;">Услуги</span>
+          <span style="font-size: 1.5vw;">Отзывы</span>
           <ul class="services">
-          <li class="service">Категория A 15000 тг</li>
-          <li class="service">Категория B, C 45000 тг</li>
-          <li class="service">Категория B 25000 тг</li>
-          <li class="service">Категория D 15000 тг</li>
-          <li class="service">Категория E 10000 тг</li>
-          <li class="service">Категория C 25000 тг</li>
+          <li class="comment">
+              <span>Сагинов Жандос 20-05-2018 17.15.15</span>
+              <div class="com-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam quia officia aliquid blanditiis dolore, minima qui, facilis excepturi dicta perspiciatis facere tenetur ad magni alias, quisquam, nam accusamus iste aspernatur.
+              Omnis adipisci quos laudantium nemo nisi, inventore officiis sit aut autem qui non repellendus repellat aliquid quidem neque, optio ducimus dolore aspernatur sed architecto, similique libero illum ad fugit. Quae.></div>
+          </li>
+
+          
         </ul>
         </div>
       </div>
   </div>
+  .make-com
 	 <?php include 'footer.php'; ?>
 </body>
   <script src="js/swiper.js"></script>

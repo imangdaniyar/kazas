@@ -1,11 +1,12 @@
 <?php include 'header2.php' ?>
-<?php if($_GET){
+<?php if($_GET['id']){
   $id = $_GET['id'];
   $insts = R::findOne('insts', 'id = ?',[$id]);
   $user = R::findOne('users', 'id = ?', (array($insts->uid)));
 }else{
   echo'<meta http-equiv="refresh" content="0; url=http://as">';;
 } ?>
+
 <div class="container">
   <div class="d-profile">
   	<div class="d-left">
@@ -78,7 +79,7 @@
 	  			</div>	
 	  			
 	  			<div class="d-info">
-	  				<?php echo $inists->phone?>
+	  				<?php echo $user->phone?>
 	  			</div>
 	  			<div class="d-info" id="d-info">
 	  				<i class="fa fa-envelope"></i> Язык
@@ -117,3 +118,5 @@
 </body>
 <script src="js/js.js"></script>
 <script src="js/brain.js"></script>
+
+

@@ -74,7 +74,7 @@ if($_FILES){
 
 		}
 		$_FILES='';
-		exit($id);	
+		
 	
  			
 	
@@ -82,3 +82,4 @@ if($_FILES){
 
 }
 }
+exit($id);
