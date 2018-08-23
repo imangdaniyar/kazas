@@ -1,15 +1,19 @@
 <?php include 'header2.php';
 if($_GET){
   $id = $_GET['id'];
+  $uid = $_COOKIE['id'];
   $as = R::findOne('autos', 'id = ?', [$id]);
   $images = R::findAll('images', 'purpose = "a" AND pid = ?',[$id]);
+  $comments = R::findAll('comments', 'purpose = "a" AND pid = ?',[$id]);
+
 }else{
   echo'<meta http-equiv="refresh" content="0; url=http://as">';
 }
  ?>
 	
 	
-  <div  class="container" style="margin-top: 0vw; width: 100%;">
+  <div  class="container nm" style="margin-top: 0vw; width: 100%;">
+    <input type="text" class="hidden" id="as-id" value="<?php echo($id); ?>">
     <div class="as-name">
       Автошкола 
       <br>
@@ -23,7 +27,7 @@ if($_GET){
         <!-- Slides -->
         <?php if($images){
           foreach ($images as $image) {
-            echo ('<div class="swiper-slide"><img class="slide-image" src="images/'.$image->name.'.jpg" alt=""></div>');
+            echo ('<div class="swiper-slide"><img class="slide-image" src="images/'.$image->name.'" alt=""></div>');
           }
         }else{
           echo('<div class="swiper-slide"><img class="slide-image" src="images/noimage.jpg" alt=""></div>');
@@ -61,22 +65,42 @@ if($_GET){
 
         <div class="as-services">
           <span style="font-size: 1.5vw;">Отзывы</span>
-          <ul class="services">
-          <li class="comment">
-              <span>Сагинов Жандос 20-05-2018 17.15.15</span>
-              <div class="com-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam quia officia aliquid blanditiis dolore, minima qui, facilis excepturi dicta perspiciatis facere tenetur ad magni alias, quisquam, nam accusamus iste aspernatur.
-              Omnis adipisci quos laudantium nemo nisi, inventore officiis sit aut autem qui non repellendus repellat aliquid quidem neque, optio ducimus dolore aspernatur sed architecto, similique libero illum ad fugit. Quae.></div>
-          </li>
+          <ul class="services" id="a-comments">
+          <?php foreach ($comments as $com) {
+            $user = R::findOne('users','id = ?',[$com->uid]);
+            if ($user->id == $uid) {
+              $app = '<span onclick="delete_acom('.$com->id.')" class="delete-com"><i class="fas fa-trash-alt"></i>Удалить</span>';   
+            }else{
+              $app = '';
+            }
+            echo('<li class="comment" id="a-'.$com->id.'">
+              <span>'.$user->sname.' '.$user->name.' '.$com->date.$app.'</span>
+              <div class="com-text">'.$com->text.'</div>
+          </li>');
+          } ?>
+          
 
           
         </ul>
         </div>
       </div>
   </div>
-  .make-com
+  <?php if(isset($_SESSION['logged'])): 
+    $user = R::findOne('users','id = ?',[$_COOKIE['id']]);
+    ?>
+  <div class="make-com">
+    <img src="images/feedback.png" alt="" class="com-image">
+    <span class="com-label">Мой отзыв</span>
+    <div id="a-text" class="feedback" contenteditable="true">Уважаемые, <?php echo $as->name ?></div>
+    <span class="com-label minis l1">Отправитель: <?php echo $user->sname.' '.$user->name ?></span>
+    <span class="com-label minis l2">Получатель: <?php echo $as->name ?></span>
+    <div onclick="send_as($('#id').val(),$('#as-id').val())" class="send-feed"><span style="position: relative;width: 100%;height: 100%;"><i class="fas fa-location-arrow lol"><span>Отправить</span></i> </span></div>
+  </div>
+<?php endif ?>
 	 <?php include 'footer.php'; ?>
 </body>
   <script src="js/swiper.js"></script>
+  <script src="js/js.js"></script>
   
 
 <script>

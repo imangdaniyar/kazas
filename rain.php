@@ -22,7 +22,15 @@ if($_POST['act']){
 		exit('Успешно');
 	}
 if($_POST['del']){
-	$id =$_POST['id'];
+	$id = $_POST['id'];
+	$images = R::find('images', 'pid = ? AND purpose = "i"',[$id]);
+	foreach ($images as $image) {
+		$img = $image->name;
+		$upload_path = __DIR__."/images/";
+		$server_filepath = $upload_path.$img;
+		unlink($server_filepath);
+	}
+	R::trashAll($images);
 	$inst = R::load('insts',$id);
 	R::trash($inst);
 	exit('Успешно');
@@ -44,5 +52,27 @@ if($_POST['tel']){
 		R::store($user);
 		exit('Успешно');
 	}
+if($_POST['afeed']){
+		$pid = $_POST['id'];
+		$uid = $_POST['uid'];
+		$user = R::findOne('users','id = ?',[$uid]);
+		$com = R::dispense('comments');
+		$com->uid = $uid;
+		$com->pid = $pid;
+		$com->text = $_POST['text'];
+		$com->purpose = 'a';
+		R::store($com);
+		exit('<li class="comment" id="a-'.$com->id.'">
+              <span>'.$user->sname.' '.$user->name.' '.$com->date.'<span onclick="delete_acom('.$com->id.')" class="delete-com"><i class="fas fa-trash-alt"></i>
+ Удалить</span></span>
+              <div class="com-text">'.$com->text.'</div>
+          </li>');
+	}
+if($_POST['adel']){
+	$id = $_POST['id'];
+	$com = R::load('comments',$id);
+	R::trash($com);
+	exit('aaa');
+}
 }
  ?>

@@ -12,7 +12,7 @@
 .profile{
 	position: relative;
 	width: 94vw;
-	margin: auto;	
+	margin:0 auto;	
 	font-family: 'Montserrat Alternates', sans-serif;
 	display: grid;
 	grid-template-columns: 50% 50%;
@@ -47,7 +47,7 @@
 	width: 98%;
 	border-radius: 0.5vw;
 	transition: 0.5s;
-	min-height: 5vw;
+	min-height: 2vw;
 	display: grid;
 	grid-template-rows: 10% 90%;
 }
@@ -56,8 +56,86 @@
 	border-bottom: 0.1vw solid silver;
 	margin-bottom: 0.5vw;
 }
-.service:hover{
-	transition: 0.5s;
-	background-color: #007AFF;
+.nm{
+	margin-bottom:0; 
+	padding-bottom: 0;
+}
+.make-com{
+	margin-bottom: 0;
+	margin:0 auto;
+	width: 40%;
+	height: 40vw;
+	position: relative;
+}
+.com-image{
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+}
+.com-label{
+	position: absolute;
+	top:3vw;
+	left: 14vw;
+	font-size: 2vw;
+	color:#007aff;
+	font-weight: bold;
+	border-bottom: 0.1vw solid silver;
+}
+.minis{
+	font-size: 1vw;
+}
+.l1{
+	top:20vw;
+	left:10vw;
+}
+.l2{
+	top:22vw;
+	left:10vw;
+}
+.feedback{
+	background-color: rgb(255,255,255,0);
+	color:#007aff;
+	font-size: 1vw;
+	position: absolute;
+	top:6vw;
+	left: 8vw;
+	outline: none;
+	width:25vw;
+	height:13vw;
+	z-index: 9999;
+	overflow-y:scroll;
+	white-space: pre;
+}
+.send-feed{
+	width: 10vw;
+	height: 3.5vw;
+	border-radius: 2vw;
+	background-color: #007aff;
+	color:white;
+	font-size: 1vw;
+	top:30vw;
+	left: 15vw;
+	position: absolute;
 	cursor: pointer;
+}
+.lol{
+	position: absolute;
+	top:1vw;
+	left: 0.3vw;
+	font-size: 1.2vw;
+	
+}
+.lol span{
+	font-family: 'Montserrat Alternates', sans-serif;
+}
+.send-feed:hover{
+	opacity: 0.5;
+}
+.delete-com{
+	float: right;
+	border-bottom: none !important;
+	cursor: pointer;
+}
+.delete-com:hover{
+	opacity:0.5;
 }

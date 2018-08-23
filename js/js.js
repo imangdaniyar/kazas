@@ -53,3 +53,44 @@ function as_filter(city) {
         	}
 });
 		}
+function send_as(id,aid) {
+	var text = $('#a-text').html();
+	str = "afeed=1&id="+aid+'&uid='+id+'&text='+text;
+	$.ajax({
+				url: '/rain.php',
+        		type: "POST",
+        		cache: false,
+        		data: str,
+        	success: function(response) {
+        		console.log(response);
+        		if(response){
+        			$('#a-comments').append(response);
+        		}else{
+        			
+        		}
+        		
+        		
+        	}
+});
+}
+
+function delete_acom(id) {
+	str = "adel=1&id="+id;
+	$.ajax({
+				url: '/rain.php',
+        		type: "POST",
+        		cache: false,
+        		data: str,
+        	success: function(response) {
+        		console.log(response);
+        		if(response){
+        			$('#a-'+id).remove();
+        		}else{
+        			
+        		}
+        		
+        		
+        	}
+});
+}
+

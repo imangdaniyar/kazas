@@ -4,7 +4,7 @@
   $insts = R::findOne('insts', 'id = ?',[$id]);
   $user = R::findOne('users', 'id = ?', (array($insts->uid)));
 }else{
-  echo'<meta http-equiv="refresh" content="0; url=http://as">';;
+  echo'<meta http-equiv="refresh" content="0; url=http://as">';
 } ?>
 
 <div class="container">
