@@ -44,21 +44,48 @@
 }
 
 .d-left{
-	background-color: #3B5998;
+	background-color: #162034;
 	box-shadow: 0 0 1vw gray;
 }
 .d-ph{
-	min-height: 35vw;
+	height: 35vw;
 	width: 100%;
 	position: relative;
 }
+.d-ph-up{
+	height:40%;	
+}
+.d-ph-fb{
+	height: 50%;
+	overflow-y:scroll; 
+}
+.d-feedback{
+	padding: 5%;
+	color: white;
+	height: 100%;
+}
+.d-services{
+	margin: 0;
+	padding: 0;
+}
+.d-comment{
+	list-style: none;
+	background-color: #395ABD;
+	margin:1vw auto;
+	padding: 0.5vw;
+	width: 98%;
+	border-radius: 0.5vw;
+	transition: 0.5s;
+	min-height: 5vw;
+	display: grid;
+	grid-template-rows: 10% 90%;
+}
 .d-ph-name{
-	z-index: 999;
-	position: absolute;
-	bottom: 3%;
-	left: 5%;
+	position: relative;
 	color: white;
 	font-size: 1.3vw;
+	padding: 5%;
+	height: 3%;
 }
 .personal-podrobno{
 	width: 98%;
