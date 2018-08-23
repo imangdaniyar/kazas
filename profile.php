@@ -43,10 +43,10 @@
 	  			</div>
 	  			
 	  			<div class="">
-	  				<?php echo $usera->exp ?>
-	  				<?php if($usera->exp < 5 || ($usera->exp > 21 && $usera->exp < 25) ) {
+	  				<?php echo $insts->exp ?>
+	  				<?php if(($insts->exp > 1 && $insts < 5) || ($insts->exp > 21 && $insts->exp < 25) ) {
 	  					echo 'года';
-	  				} elseif ($usera->exp == 1 || $usera->exp == 21) {
+	  				} elseif ($insts->exp == 1 || $insts->exp == 21) {
 	  					echo 'год';
 	  				} else {
 	  					echo 'лет';

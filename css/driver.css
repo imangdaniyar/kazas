@@ -18,6 +18,7 @@
 	background-color: rgb(0,0,0,0);
 	color: #2C84C0;
 	border-bottom: 0.1vw solid #2C84C0;
+	border-radius: 0 0 1vw 0;
 }
 .d-card{
 	width: 91%;
@@ -26,7 +27,7 @@
 }
 .d-personal{
 	display: grid;
-	grid-template-columns: 25% 25% 25% 25%;
+	grid-template-columns: 20% 25% 25% 30%;
 	width: 100%;
 	position: relative;
 	background-color: #F7F7F7;
