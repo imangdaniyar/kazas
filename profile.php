@@ -77,29 +77,34 @@
   		<div class="p-insts">
   			<div class="p-active">
   				<span>Активные</span><br>
-  				<?php foreach ($active_insts as $inst) {
+  				<div class="fulll"><?php foreach ($active_insts as $inst) {
   					$date = new DateTime($inst->date);
+  					$date->add(new DateInterval('P31D'));
   					$date = $date->format('d.m.Y');
   					echo ('<div class="p-inst-active">
-  					<span class="p-label">Активно до '.$date.'</span>
+  					<a href="driver.php?id='.$inst->id.'"><span class="p-label">Активно до '.$date.'</span></a>
   					<div class="pia-edit p"><a style="color:white;" href="edit.php?id='.$inst->id.'"><i class="fas fa-edit"></a></i></div>
   					<div class="pia-down p"><i onclick="deactivate('.$inst->id.')" class="fas fa-times"></i></div>
   				</div>');
-  				} ?>
+
+  				} ?></div>
+  				
+
   				
 
   			</div>
   			<div class="p-dis">
   				<span>Не активные</span><br>
-  				<?php foreach ($dis_insts as $inst) {
+  				<div class="fulll"><?php foreach ($dis_insts as $inst) {
   					
   					echo ('<div class="p-inst-dis">
-  					<span class="p-label">Не активно</span>
-  					<div class="pia-activate p"><i onclick="actiivate('.$inst->id.')" class="fas fa-upload"></i></div>
+  					<a href="driver.php?id='.$inst->id.'"><span class="p-label">Не активно</span></a>
+  					<div class="pia-activate p"><i onclick="activate('.$inst->id.')" class="fas fa-upload"></i></div>
   					<div class="pia-edit p"><a style="color:white;" href="edit.php?id='.$inst->id.'"><i class="fas fa-edit"></i></a></div>
   					<div class="pia-delete p"> <i onclick="delete_inst('.$inst->id.')" class="fas fa-trash"></i></div>
   				</div>');
-  				} ?>
+  				} ?></div>
+  				
   				
   			</div>
   		</div>
@@ -109,5 +114,4 @@
 
 <?php include 'footer.php' ?>
 </body>
-<script src="js/js.js"></script>
-<script src="js/brain.js"></script>
+<script src="js/profile.js"></script>

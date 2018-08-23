@@ -12,14 +12,15 @@ if ( !R::testConnection() )
 	$add = R::dispense('insts');
 $add->uid = $data['uid'];
 $add->city = $data['city'];
+$add->active = "1";
 $add->exp = $data['exp'];
 $add->car = $data['car'];
 $add->lang = $data['lang'];
 $add->info = $data['info'];
 R::store($add);
-$id = R::getInsertID();
+$id = $add->id;
 if($_FILES){
-	var_dump($_FILES['i-file1']);
+	
 	if($files['i-file1']){
 		if(($files['i-file1']['type'] = "image/jpg") or ($files['i-file1']['type'] = "image/jpeg")){
 			$upload_path = __DIR__."/images/";

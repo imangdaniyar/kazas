@@ -35,6 +35,7 @@ function upload(id) {
       data: form,
       success: function(response){
       	console.log(response);
+      	alert('response');
       }
 		});
 	}

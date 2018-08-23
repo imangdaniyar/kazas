@@ -60,10 +60,14 @@
 	width: 100%;
 	padding-bottom: 1vw;
 }
-.filter label,div{
+.filter label,.filter div{
 	font-family: 'Montserrat Alternates', sans-serif;
 	font-size: 1vw;
 	font-weight: bold;
+}
+div{
+font-family: 'Montserrat Alternates', sans-serif;
+	font-size: 1vw;
 }
 .filter select, .filter input{
 	width: 100%;

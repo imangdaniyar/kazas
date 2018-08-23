@@ -32,8 +32,6 @@
 	width: 96%;
 	position: relative;
 	margin-top: 1vw;
-
-
 }
 .p-personal{
 	display: grid;
@@ -54,23 +52,30 @@
 	box-shadow: 0 0 1vw gray;
 }
 .p-insts{
-	display: grid;
-	grid-template-rows: 50% 50%;
-	width: 100%;
-	height: 90%;
-	position: relative;
-	color:white;
+	width: 100% !important;
+	height: 30vw !important;
+	position: relative !important;
+	color:white !important;
 	
+}
+.fulll{
+	width: 100%;
+	max-height: 100%;
+	overflow: hidden;
+
 }
 .p-active{
 	border-bottom: 0.1vw solid silver;
-	height: 100%;
+	height: 50%;
+	
 	width: 100%;
 	overflow-y: scroll;
+	box-sizing: border-box;
 }
-.p-dis{
 
-	height: 100%;
+.p-dis{
+	box-sizing: border-box;
+	height: 50%;
 	width: 100%;
 	overflow-y: scroll;
 }
@@ -91,11 +96,15 @@
 	cursor: pointer;	
 	text-align: center;	
 }
+.p-inst-active a, .p-inst-dis a{
+	color:white;
+	margin-top: 0.4vw;		
+}
 
 .pia-edit{
 	border-left: 0.1vw solid silver;
 	font-size: 1.5vw;
-	color:white;
+	
 
 }
 .pia-delete{
