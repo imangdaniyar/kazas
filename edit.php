@@ -38,11 +38,10 @@
 	  			</div>
 	  			
 	  			<div class="d-info">
-	  				<?php if ($insts->car == 1){ 
-	  					echo 'Есть'; }
-	  				else {
-	  					echo 'Нет';}
-					?>
+	  				<select class="d-edit" name="Машина" id="e-car">
+	  					<option value="1" selected=""true>Есть</option>
+	  					<option value="0">Нет</option>
+	  				</select>
 					</div>	  				 
 	  			
 	  			<div class="d-info" id="d-exp">
@@ -50,21 +49,16 @@
 	  			</div>
 	  			
 	  			<div class="d-info">
-	  				<?php echo $insts->exp ?>
-	  				<?php if(($insts->exp > 1 && $insts < 5) || ($insts->exp > 21 && $insts->exp < 25) ) {
-	  					echo 'года';
-	  				} elseif ($insts->exp == 1 || $insts->exp == 21) {
-	  					echo 'год';
-	  				} else {
-	  					echo 'лет';
-	  				} ?>
-	  				</div>
+	  				<input id="e-exp" class="d-edit" type="number" value="<?php echo $insts->exp ?>" style="color: black">
+	  				
+	  			</div>
 
 	  			<div class="d-info" id="d-exp">
 	  				<i class="fa fa-map-marker-alt"></i> Город
 	  			</div>
 	  			
-	  			<div class="d-info"><?php echo $insts->city ?></div>
+	  			<div class="d-info">
+	  				<input class="d-edit" type="text" value="<?php echo $insts->city ?>" id="e-city"></div>
 	  			
 	  			<div class="d-info" id="d-info">
 	  				<i class="fa fa-envelope"></i> E-mail
@@ -78,20 +72,19 @@
 	  			</div>	
 	  			
 	  			<div class="d-info">
-	  				<?php echo $inists->phone?>
+	  				<input type="phone" class="d-edit" value="<?php echo $inists->phone?>" id="e-phone">
 	  			</div>
 	  			<div class="d-info" id="d-info">
 	  				<i class="fa fa-envelope"></i> Язык
 	  			</div>	
 	  			
 	  			<div class="d-info">
-	  				<?php if($insts->lang == k) {
-	  					echo 'Казахский';
-	  				} elseif ($insts->lang == r) {
-	  					echo 'Русский';
-	  				} else {
-	  					echo 'Оба';
-	  				} ?>
+	  				<select class="d-edit" name="Язык" id="e-lang" >
+	  					<option value="k" selected=""true>Казахский</option>
+	  					<option value="r">Русский</option>
+	  					<option value="b">Оба</option>
+	  				</select>
+	  				
 	  			</div>
   			</div>
   			<div class="personal-podrobno">
@@ -99,9 +92,7 @@
   					<i class="fa fa-envelope"></i> Подробно
   				</div>
   				<div class="podrobno-info">
-					<pre class="p-i" >
-<?php echo $insts->info?>
-					</pre>
+					<div class="d-edit" id="e-info" contenteditable="true" style="white-space: pre;"></div>
 				</div>
   			</div>
   			

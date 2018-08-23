@@ -69,6 +69,7 @@
 	border-radius: 0.3vw;
 	padding: 1%;
 	margin-top: 5%;
+	height: auto;
 }
 .podrobno{
 	font-size: 1.2vw;
@@ -77,13 +78,12 @@
 	font-size: 1vw;
 	margin-top: 1%;
 }
-.lesson{
-	font-size: 1vw;
-	margin-top: 1%;
+.p-i{
+	font-family: 'Montserrat Alternates', sans-serif;
 }
-.lessons{
-	margin-top: 1%;
-}
-.l-chapter{
-	cursor: pointer;
+.d-edit{
+	width: 90%;
+	padding:0.2vw;
+	border-radius: 0.2vw;
+	border: 0.1vw solid silver;	
 }

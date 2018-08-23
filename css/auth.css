@@ -84,7 +84,7 @@
 	width: 80%;
 	height: 2vw;
 }
-.inp input[type=text],input[type=number], input[type=password], .select-inp{
+.inp input[type=text],.inp input[type=number],.inp input[type=password], .select-inp{
 	padding: 0.5vw;
 	width: 100%;
 	height: 100%;
