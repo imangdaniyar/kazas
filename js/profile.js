@@ -6,6 +6,12 @@ function deactivate(id) {
         		type: "POST",
         		cache: false,
         		data: str,
+                        beforeSend: function() {
+        // setting a timeout
+                 $('.container').addClass('disabled');
+                        
+                },
+
         	success: function(response) {
         		console.log(response);
         		if(response =="Успешно"){
@@ -22,6 +28,11 @@ function activate(id) {
         		type: "POST",
         		cache: false,
         		data: str,
+                        beforeSend: function() {
+        // setting a timeout
+                 $('.container').addClass('disabled');
+                        
+                },
         	success: function(response) {
         		console.log(response);
         		if(response =="Успешно"){
@@ -38,6 +49,9 @@ function delete_inst(id) {
         		type: "POST",
         		cache: false,
         		data: str,
+                        beforeSend: function() {
+                                $('.container').addClass('disabled');
+                        },
         	success: function(response) {
         		console.log(response);
         		if(response =="Успешно"){

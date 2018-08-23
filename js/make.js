@@ -33,6 +33,11 @@ function upload(id) {
       contentType: false, // важно - убираем форматирование данных по умолчанию
       processData: false, // важно - убираем преобразование строк по умолчанию
       data: form,
+      beforeSend: function() {
+        // setting a timeout
+        	 $('.container').addClass('disabled');
+        		
+    		},
       success: function(response){
       	console.log(response);
       	location.replace('http://as/driver.php?id='+response+' ');

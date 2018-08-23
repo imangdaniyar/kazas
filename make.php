@@ -60,13 +60,14 @@
         </div>
       </div>
 
-      <div onclick="upload($('#id').val());" class="make-filter make-button inv"><span>Отправить</span></div>
+      <div onclick="upload($('#id').val());" id="send-i" class="make-filter make-button inv"><span>Отправить</span></div>
+      <div onclick="" id="send-pre" class="make-filter make-button inv hidden"><span>Отправить</span></div>
   </div>
 </div>
 
 <?php include 'footer.php' ?>
 </body>
-<script src="js/make.js?123"></script>
+<script src="js/make.js?12345"></script>
 <?php else: echo'<meta http-equiv="refresh" content="2; url=http://as">'; ?>
  Зарегестрируйтесь или войдите в систему
 

@@ -4,6 +4,7 @@
 	height: 30vw;
 	width: 100%;
 	position: relative;
+	margin-bottom: 6vw;
 }
 .d-right{
 	background-color: white;
@@ -113,4 +114,7 @@
 	padding:0.2vw;
 	border-radius: 0.2vw;
 	border: 0.1vw solid silver;	
+}
+.add{
+	width: 50%!important;
 }

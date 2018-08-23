@@ -267,6 +267,9 @@ $(document).ready(function(){
         		type: "POST",
         		cache: false,
         		data: str,
+        		beforeSend: function() {
+        			$('.container').addClass('disabled');
+        		},
         		success: function(response) {
             		console.log(response);
             		var obj = jQuery.parseJSON(response);
@@ -300,6 +303,11 @@ var login = $('#in-login').val().trim().toLowerCase();
         		type: "POST",
         		cache: false,
         		data: str,
+        		beforeSend: function() {
+        // setting a timeout
+        	 $('.container').addClass('disabled');
+        		
+    		},
         		success: function(response) {
             		var obj = jQuery.parseJSON(response);
             		if (obj.ans==='0'){

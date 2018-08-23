@@ -74,5 +74,26 @@ if($_POST['adel']){
 	R::trash($com);
 	exit('aaa');
 }
+if($_POST['ifeed']){
+		$pid = $_POST['id'];
+		$uid = $_POST['uid'];
+		$user = R::findOne('users','id = ?',[$uid]);
+		$com = R::dispense('comments');
+		$com->uid = $uid;
+		$com->pid = $pid;
+		$com->text = $_POST['text'];
+		$com->purpose = 'i';
+		R::store($com);
+		exit('<li class="comment" id="i-'.$com->id.'">
+              <span>'.$user->sname.' '.$user->name.' '.$com->date.$app.'<span onclick="delete_acom('.$com->id.')" class="delete-com"><i class="fas fa-trash-alt"></i></span></span>
+              <div class="com-text">'.$com->text.'</div>
+          </li>');
+	}
+if($_POST['idel']){
+	$id = $_POST['id'];
+	$com = R::load('comments',$id);
+	R::trash($com);
+	exit('aaa');
+}
 }
  ?>

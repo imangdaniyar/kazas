@@ -1,14 +1,17 @@
 <?php include 'header2.php' ?>
 <?php if($_GET['id']){
   $id = $_GET['id'];
+  $uid = $_COOKIE['id'];
   $insts = R::findOne('insts', 'id = ?',[$id]);
   $user = R::findOne('users', 'id = ?', (array($insts->uid)));
   $images = R::findAll('images', 'purpose = "i" AND pid = ?',[$id]);
+  $comments = R::findAll('comments', 'purpose = "i" AND pid = ?',[$id]);
 }else{
   echo'<meta http-equiv="refresh" content="0; url=http://as">';
 } ?>
 
-<div class="container">
+<div class="container nm">
+	<input type="text" class="hidden" id="i-id" value="<?php echo($id); ?>">
   <div class="d-profile">
   	<div class="d-left">
   		<div class="d-ph">
@@ -22,7 +25,7 @@
         <!-- Slides -->
         <?php if($images){
           foreach ($images as $image) {
-            echo ('<div class="swiper-slide"><img class="slide-image" style="opacity:1;" src="images/'.$image->name.'" alt=""></div>');
+            echo ('<div class="swiper-slide"><img class="slide-image" style="opacity:1; height:100%" src="images/'.$image->name.'" alt=""></div>');
           }
         }else{
           echo('<div class="swiper-slide"><img class="slide-image" src="images/noimage.jpg" alt=""></div>');
@@ -41,11 +44,20 @@
   			<div class="d-ph-fb">
   				<div class="d-feedback">
 		          <span style="font-size: 1.5vw;">Отзывы</span>
-		          <ul class="d-services">
-		          <li class="d-comment">
-		              <span>Сагинов Жандос 20-05-2018 17.15.15</span>
-		              <div class="com-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam quia officia aliquid blanditiis dolore, minima qui, facilis excepturi dicta perspiciatis facere tenetur ad magni alias, quisquam, nam accusamus iste aspernatur.</div>
-		          </li>
+		          <ul class="d-services" id="i-comments">
+		          	<?php foreach ($comments as $com) {
+            $suser = R::findOne('users','id = ?',[$com->uid]);
+            if ($suser->id == $uid) {
+              $app = '<span onclick="delete_acom('.$com->id.')" class="delete-com"><i class="fas fa-trash-alt"></i></span>';   
+            }else{
+              $app = '';
+            }
+            echo('<li class="comment" id="a-'.$com->id.'">
+              <span>'.$suser->sname.' '.$suser->name.' '.$com->date.$app.'</span>
+              <div class="com-text">'.$com->text.'</div>
+          </li>');
+          } ?>
+		          
 		        </ul>
 		        </div>
   			</div>			
@@ -148,6 +160,14 @@
   		</div>
   	</div>
   	
+  </div>
+   <div class="make-com add">
+    <img src="images/feedback.png" alt="" class="com-image">
+    <span class="com-label">Мой отзыв</span>
+    <div id="a-text" class="feedback" contenteditable="true">Уважаемые, <?php echo $user->sname.' '.$user->name ?></div>
+    <span class="com-label minis l1">Отправитель: <?php echo $user->sname.' '.$user->name ?></span>
+    <span class="com-label minis l2">Получатель: <?php echo $user->sname.' '.$user->name ?></span>
+    <div onclick="send_i($('#id').val(),$('#i-id').val())" class="send-feed"><span style="position: relative;width: 100%;height: 100%;"><i class="fas fa-location-arrow lol"><span>Отправить</span></i> </span></div>
   </div>
 </div>
 

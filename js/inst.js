@@ -6,6 +6,11 @@ function search_inst(lang,car,exp,city) {
         		type: "POST",
         		cache: false,
         		data: str,
+                        beforeSend: function() {
+        // setting a timeout
+                 $('.container').addClass('disabled');
+                        
+                },
         	success: function(response) {
         		console.log(response);
         		if(response =="no"){

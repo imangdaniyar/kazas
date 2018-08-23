@@ -81,7 +81,7 @@
   		<div class="p-insts">
   			<div class="p-active">
   				<span>Активные</span><br>
-  				<div class="fulll"><?php foreach ($active_insts as $inst) {
+  				<div class="fulll"></div><?php foreach ($active_insts as $inst) {
   					$date = new DateTime($inst->date);
   					$date->add(new DateInterval('P31D'));
   					$date = $date->format('d.m.Y');
@@ -91,7 +91,7 @@
   					<div class="pia-down p"><i onclick="deactivate('.$inst->id.')" class="fas fa-times"></i></div>
   				</div>');
 
-  				} ?></div>
+  				} ?>
   				
 
   				

@@ -81,10 +81,60 @@ function delete_acom(id) {
         		type: "POST",
         		cache: false,
         		data: str,
+                        beforeSend: function() {
+                                $('.container').addClass('disabled');
+                        },
+        	
         	success: function(response) {
         		console.log(response);
         		if(response){
         			$('#a-'+id).remove();
+        		}else{
+        			
+        		}
+        		
+        		
+        	},
+        	complete: function(){
+
+        	}
+});
+}
+function send_i(id,iid) {
+	var text = $('#a-text').html();
+	str = "ifeed=1&id="+iid+'&uid='+id+'&text='+text;
+	$.ajax({
+				url: '/rain.php',
+        		type: "POST",
+        		cache: false,
+        		data: str,
+        	success: function(response) {
+        		console.log(response);
+        		if(response){
+        			$('#i-comments').append(response);
+        		}else{
+        			
+        		}
+        		
+        		
+        	}
+});
+}
+
+function delete_icom(id) {
+	str = "idel=1&id="+id;
+	$.ajax({
+				url: '/rain.php',
+        		type: "POST",
+        		cache: false,
+        		data: str,
+                        beforeSend: function() {
+                                $('.container').addClass('disabled');
+                        },
+        	success: function(response) {
+        		console.log(response);
+        		if(response){
+        			$('#i-'+id).remove();
         		}else{
         			
         		}
