@@ -101,13 +101,19 @@
 	  			
 	  			<div class="d-info">
 	  				<?php echo $insts->exp ?>
-	  				<?php if(($insts->exp > 1 && $insts < 5) || ($insts->exp > 21 && $insts->exp < 25) ) {
-	  					echo 'года';
-	  				} elseif ($insts->exp == 1 || $insts->exp == 21) {
+	  				<?php 
+	  				$exp = $insts->exp;
+	  				$last = (int)$exp[strlen($exp) - 1];
+	  				if((int)$exp > 10 && (int)$exp < 20) {
+	  					echo 'лет';
+	  				} elseif ($last == 1) {
 	  					echo 'год';
+	  				} elseif ($last > 1 && $last <5) {
+	  					echo 'года';
 	  				} else {
 	  					echo 'лет';
-	  				} ?>
+	  				}
+	  				?>
 	  				</div>
 
 	  			<div class="d-info" id="d-exp">
