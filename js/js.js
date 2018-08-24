@@ -88,7 +88,7 @@ function delete_acom(id) {
         	success: function(response) {
         		console.log(response);
         		if(response){
-        			$('#a-'+id).remove();
+        			location.reload();
         		}else{
         			
         		}
@@ -133,8 +133,9 @@ function delete_icom(id) {
                         },
         	success: function(response) {
         		console.log(response);
+                        $('.container').removeClass('disabled');
         		if(response){
-        			$('#i-'+id).remove();
+        			location.reload();
         		}else{
         			
         		}

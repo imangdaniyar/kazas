@@ -33,7 +33,7 @@
 	color: white;
 	max-height: 18.55vw;
 	overflow-y:scroll; 
-
+	overflow-x: hidden;
 }
 .services{
 	margin: 0;
@@ -44,17 +44,20 @@
 	background-color: #395ABD;
 	margin:1vw auto;
 	padding: 0.5vw;
-	width: 98%;
+	max-width: 98%;
 	border-radius: 0.5vw;
 	transition: 0.5s;
 	min-height: 2vw;
 	display: grid;
 	grid-template-rows: 10% 90%;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	display: block;
 }
 .comment span{
 	color:lightgray;
 	border-bottom: 0.1vw solid silver;
-	margin-bottom: 0.5vw;
+	margin-bottom: 1vw;
 }
 .nm{
 	margin-bottom:0; 
@@ -71,6 +74,12 @@
 	width: 100%;
 	height: 100%;
 	z-index: 0;
+}
+.com-text{
+	max-width: 100%;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	margin-top: 0.3vw;
 }
 .com-label{
 	position: absolute;
