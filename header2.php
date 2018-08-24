@@ -41,6 +41,7 @@ if ( !R::testConnection() )
 	<link rel="stylesheet" href="css/footer.css">
 	<link rel="stylesheet" href="css/auth.css">
 	<link rel="stylesheet" href="css/inst.css">
+	<link rel="stylesheet" href="css/edu.css">
 	<link rel="stylesheet" href="css/driver.css">
 	<link rel="stylesheet" href="css/profile.css">
 	<link rel="stylesheet" href="css/make.css">
@@ -58,7 +59,7 @@ if ( !R::testConnection() )
 	<ul class="navbar">
 		<li class="nav-item" ><a href="/#as" class="nav-link"><i class="fas fa-car"><span> Автошколы</span></i></a></li>
 		<li class="nav-item"  id="menu"><a href="/inst.php" class="nav-link"><i class="fas fa-users"><span> Инструкторы</span></i></a></li>
-		<li class="nav-item"><a href="" class="nav-link"><i class="fas fa-book"><span> Подготовка</span></i></a></li>
+		<li class="nav-item"><a href="/edu.php" class="nav-link"><i class="fas fa-book"><span> Подготовка</span></i></a></li>
 		<li class="nav-item"><a href="" class="nav-link"><i class="fas fa-address-book"><span> Контакты</span></i></a></li>
 		<?php if(isset($_SESSION['logged'])):  ?>
 		<li class="draw">
