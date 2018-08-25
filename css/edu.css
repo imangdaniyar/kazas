@@ -1,0 +1,62 @@
+.edu-nav{
+	background: lightgray;
+	width: 100%;
+}
+.e-choise{
+	margin:1vw ;
+	width: 25%;
+	border-radius: 2vw;
+	overflow: hidden;
+	height: 2.3vw;
+	cursor: pointer;
+	position: absolute;
+	right: 0;
+}
+.e-choise:after{
+	content: '';
+	clear: both;
+	display: table;
+}
+.e-choise span{
+	font-weight: bold;
+	font-size: 1vw;
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform:translate(-50%,-50%);
+	color: lightgray;
+}
+.pay{
+	width: 50%;
+	height: 100%;
+	background-color: #395ABD;
+	float: left;
+	font-family: 'Montserrat Alternates', sans-serif;
+	position: relative;
+	transition: 0.5s;
+}
+.pay:after{
+	content: '';
+	clear: both;
+	display: table;
+}
+
+.free{
+	float: left;
+	width:50%;
+	height: 100%;
+	background-color: #395ABD;
+	font-family: 'Montserrat Alternates', sans-serif;
+	position: relative;
+	transition: 0.1s;
+}
+.active{
+	transition: 0.1s;
+	background-color: #007AFF;
+}
+.active span{
+	color:#fff;
+}
+.lessons{
+	height: 4.4vw;
+}
