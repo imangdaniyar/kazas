@@ -26,6 +26,8 @@ if ( !R::testConnection() )
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+
 	<meta charset="UTF-8">
 	<title>Autoschool</title>
 	<script
@@ -37,13 +39,18 @@ if ( !R::testConnection() )
 	<link rel="stylesheet" href="css/footer.css">
 	<link rel="stylesheet" href="css/search.css">
 	<link rel="stylesheet" href="css/auth.css">
+	<link rel="stylesheet" href="css/media.css">
 	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
 	<link href="https://fonts.googleapis.com/css?family=Comfortaa|Faster+One|Montserrat+Alternates" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/swiper.css">
 </head>
 <body>
+	
+	<input type="checkbox" name="check" id="check">
+	<label class="burger" for="check">+</label>
 	<div class="header" >
+
 	<div class="logo">
 		<a href="index.php"><div class="logo-container">
 		</div>

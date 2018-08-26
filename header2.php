@@ -27,6 +27,7 @@ if ( !R::testConnection() )
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 	<title>Autoschool</title>
 	<script
   src="http://code.jquery.com/jquery-3.3.1.min.js"
@@ -48,10 +49,19 @@ if ( !R::testConnection() )
 	<link rel="stylesheet" href="css/profile.css">
 	<link rel="stylesheet" href="css/make.css">
 	<link rel="stylesheet" href="css/as.css">
+	<link rel="stylesheet" href="css/media.css">
+<style>
+	@media screen and (max-width: 480px) {
+		.container{
+			margin-top: 70px;
 
+		}
+	}
+</style>
 </head>
 <body>
-
+<input type="checkbox" name="check" id="check">
+	<label class="burger" for="check">+</label>
 <div class="header2">
 	<div class="logo">
 		<a href="index.php"><div class="logo-container">

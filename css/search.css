@@ -2,10 +2,10 @@
 	width: 100%;
 	height: 4vw;
 	box-sizing: border-box;
-	background-color: #007AFF;
+	background-color: #395ABD;
 	position: relative;
 }
-select{
+ .search-nav select{
 	width: 15%;
 	height: 3%;
 	font-size:1.5vw;
@@ -29,7 +29,7 @@ select{
 	font-size: 2vw;
 	left:20%;
 	top: 50%;
-		transform: translateY(-50%);
+	transform: translateY(-50%);
 }
 .search-button{
 	width: 11%;

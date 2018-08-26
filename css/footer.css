@@ -3,10 +3,12 @@
 	position: relative;
 	height: 20vw;
 	box-sizing: border-box;
-	z-index: 999;
+	z-index: 99;
 	background-color: #162034;
 	padding: 1vw;
 	margin-top:10vw;
+	bottom: 0;
+	position: relative;
 }
 .footer-grid{
 	display: grid;
@@ -29,6 +31,9 @@
 	margin-top: 1vw;
 	font-weight: bold;
 }
-.mail,.call,.findus{
+.mail{
 	cursor: pointer;
+}
+ .fac{
+	font-size: 3vw;
 }

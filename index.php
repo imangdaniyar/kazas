@@ -44,10 +44,17 @@
     <div class="grid-container">
 	<?php 
 		foreach ($autos as $auto) {
-			echo('<a href="as.php?id='.$auto->id.'"><div  class="card">
-        <img class="card-img" src="slider/slide1.jpg" alt="">
+      $image = R::findOne('images','purpose="a" AND pid=?', [$auto->id]);
+      if($image){
+         $img = '<img class="card-img" src="slider/'.$image->name.'" alt="">';
+       }else{
+        $img = '<img class="card-img" src="images/noimage.jpg" alt="">';
+       }
+     
+			echo('<a href="as.php?id='.$auto->id.'"><div class="card">
+        '.$img.'
         <span class="card-title">'.$auto->name.'</span>
-        <hr style="border: 0.05vw solid rgb(0, 122, 255);">
+        <hr style="border: 0.05vw solid gray; width:80%;">
         <span class="card-content">
           город: '.$auto->city.'
         </span>

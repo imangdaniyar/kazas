@@ -6,7 +6,9 @@
 	z-index: 999;
 	transition: 0.5s;	
 }
-
+#check{
+	display: none;
+}
 .header2{
 	width: 100%;
 	position: relative;
@@ -14,6 +16,19 @@
 	box-sizing: border-box;
 	z-index: 999;
 	transition: 0.5s;
+}
+.burger{
+	width: 30px;
+	height: 30px;
+	background-color: black;
+	color:white;
+	font-size: 30px;
+	text-align: center;
+	position: fixed;
+	top:1%;
+	right: 5%;
+	z-index: 9999;
+	display: none;
 }
 .logo{
 	width: 30%;

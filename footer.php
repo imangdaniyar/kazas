@@ -9,21 +9,21 @@
 		</div>
 		
 		<div class="mail">
-			<i class="fa fa-envelope" style="font-size: 3vw;"></i>
+			<i class="fa fa-envelope fac" style=""></i>
 			<br>
 			<div class="footer-card">
 			Напишите
 			</div>
 		</div>
-		<div class="call">
-			<i class="fa fa-phone" style="font-size: 3vw;"></i>
+		<div class="mail">
+			<i class="fa fa-phone fac" style=""></i>
 			<br>
 			<div class="footer-card">
 			Позвоните
 			</div>
 		</div>
-		<div class="findus">
-			<i class="fa fa-compass" style="font-size: 3vw;"></i>
+		<div class="mail">
+			<i class="fa fa-compass fac" style=""></i>
 			<br>
 			<div class="footer-card">
 			Найдите

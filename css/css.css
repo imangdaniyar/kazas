@@ -1,15 +1,21 @@
+html{
+	height: 100%;
+	position: relative;
+}
 body{
 	margin:0;
 	padding: 0;
 	box-sizing: border-box;
-
+	position: relative;
+	width: 100%;
+	height: 100%;
 }
 a{
 	text-decoration: none;
 }
 .swiper-container {
     width: 100%;
-    height: 100vh;
+    height: 48vw;
 }
 .slide-image{
 	width: 100%;
@@ -65,49 +71,51 @@ a{
 .container{
 	width: 80vw;
 	height: auto;
-	height: 100%;
 	position: relative;
 	margin: auto;
 	margin-top: 1vw;
-	padding-bottom: 20vw;
+
 	box-sizing: border-box;
 	min-height: 35vw;
 }
 .grid-container{
 	display: grid;
-	grid-template-columns: 33% 33%
-	33%	;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-template-rows: auto;
 	height: auto;
 	grid-gap: 1vw;
 	width: 100%;
 }
 .card{
-	border: 0.1vw solid rgb(0, 122, 255);
+	border: 0.1vw solid gray;
 	text-align: center;
-	width: 100%;
+	width: 90%;
 	background-color: #fff;
 	font-family: 'Montserrat Alternates', sans-serif;
 	border-radius: 1vw;
 	cursor: pointer;
-	transition: 1s;
+	transition: 0.5s;
+	padding: 0.5vw;
 }
 .card-img{
 	width: 100%;
-	padding: 0;
-	border-radius: 1vw 1vw 0 0;
+	height: 15vw;
+	
+	border-radius: 1vw;
 }
 .card-title{
 	font-size: 1.5vw;
 	font-weight: bold;
-	color: rgb(0, 122, 255);
+	color: #395ABD;
 }
 .card-content{
 	font-size: 1vw;
+	color:#395ABD;
 }
 .card:hover{
-	background-color: lightgray;
-	transition: 1s;
+	
+	transition: 0.5s;
+	box-shadow: 0vw 0vw 1vw gray;
 }
 .kek{
 	font-family: "Montserrat Alternates", sans-serif; color:gray; font-size:2vw;
