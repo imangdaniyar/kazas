@@ -1,8 +1,19 @@
-<?php include 'header2.php' ?>
+<?php include 'header2.php';
+  $videos = R::findAll('theory');?>
 
 
 <div class="container nm">
   <div class="courses">
+    <?php 
+      foreach ($videos as $video) {
+          echo('<a href="/v-l.php?id='.$video->id.'" style="text-decoration: none; color: white">
+      <div class="course">
+        <span class="c-title">'.$video->title.'
+        </span>
+      </div>
+    </a>');
+      }
+     ?>
     <a href="/v-l.php" style="text-decoration: none; color: white">
       <div class="course">
         <span class="c-title">Общие положения
