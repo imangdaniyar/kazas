@@ -13,9 +13,18 @@
 	padding-top: 2vw;
 }
 .video{
-	width: 560px;
-	height: 315px;
+	width: 50vw;
+	height: 30vw;
 	text-align: center;
 	margin: 1vw auto;
 	background-color: #111;
+}
+.link-test{
+	background-color: white;
+	width: 20%;
+	height: auto;
+	padding: 0.5vw;
+	float: right;
+	text-align: center;
+	border-radius: 0.5vw;
 }

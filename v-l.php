@@ -22,6 +22,9 @@
     <div class="video">
       <iframe width="100%" height="100%" src="<?php echo $theory->video; ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
+    <a href="/test.php?id=<?php echo $id ?>">
+      <div class="link-test">Перейти к тесту</div>
+    </a>
   </div>
 </div>
 

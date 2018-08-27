@@ -1,0 +1,15 @@
+.test{
+	width: 100%;
+	height: 30vw;
+	background-color: lightgray;
+	padding: 1vw;
+}
+.test-list{
+	list-style: none;
+}
+.answer{
+	margin: 1vw;
+}
+.question{
+	font-size: 1.5vw;
+}

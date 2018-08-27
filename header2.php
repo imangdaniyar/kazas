@@ -43,6 +43,7 @@ if ( !R::testConnection() )
 	<link rel="stylesheet" href="css/auth.css">
 	<link rel="stylesheet" href="css/inst.css">
 	<link rel="stylesheet" href="css/edu.css">
+	<link rel="stylesheet" href="css/test.css">
 	<link rel="stylesheet" href="css/v-l.css">
 	<link rel="stylesheet" href="css/theory.css">
 	<link rel="stylesheet" href="css/driver.css">
