@@ -107,7 +107,7 @@ $insts = R::findOne('insts', 'id = ?',[$id]);
   					<i class="fa fa-envelope"></i> Подробно
   				</div>
   				<div class="podrobno-info">
-					<div class="d-edit" id="e-info" contenteditable="true" style="white-space: pre;"><?php echo($insts->info); ?></div>
+					<div class="d-edit" id="e-info" contenteditable="true" style=""><?php echo($insts->info); ?></div>
 				</div>
   			</div>
   			

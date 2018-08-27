@@ -7,7 +7,7 @@
     <li>Первый значек фото и будет главным</li>
   </ul>
 </div>
-<div class="container">
+<div class="container" id="mc">
   <div class="make-form">
     <div id="title">Подать объявление</div>
       <div class="make-filter">
@@ -45,6 +45,7 @@
             <option value="k">Казахский</option>
           </select>
       </div>
+      
       <div class="inp">
         <div class="make-info" id="i-info" contenteditable="true">Информация о вас</div>
        

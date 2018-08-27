@@ -70,11 +70,11 @@ a{
 }
 .container{
 	width: 80vw;
-	height: auto;
+	min-height: 100%!important;
 	position: relative;
 	margin: auto;
 	margin-top: 1vw;
-
+	height: auto;
 	box-sizing: border-box;
 	min-height: 35vw;
 }

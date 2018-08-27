@@ -6,7 +6,7 @@
     $dis_insts = R::findAll('insts','uid = ? AND active!="1"',[$_COOKIE['id']]);
     ?>
 
-<div class="container">
+<div class="container nm">
   <div class="u-profile">
   	<div class="p-left">
   		<div class="p-title">
@@ -38,34 +38,21 @@
 					?>
 					</div>	  				 
 	  			
-	  			<div class="p-info" id="p-exp">
-	  				<i class="fa fa-address-card"></i> Стаж вождения
-	  			</div>
 	  			
-	  			<div class="">
-	  				<?php echo $insts->exp ?>
-	  				<?php if(($insts->exp > 1 && $insts < 5) || ($insts->exp > 21 && $insts->exp < 25) ) {
-	  					echo 'года';
-	  				} elseif ($insts->exp == 1 || $insts->exp == 21) {
-	  					echo 'год';
-	  				} else {
-	  					echo 'лет';
-	  				} ?></div>
 
 	  			<div class="p-info" id="p-exp">
 	  				<i class="fa fa-mobile"></i> Телефон
 	  			</div>
 	  			
-	  			<div class="">+7(777)777-77-77</div>
+	  			<div class=""><?php echo $user->phone ?></div>
 	  			
 	  			<div class="p-info" id="p-info">
 	  				<i class="fa fa-caret-square-down"></i> Подробно
 	  			</div>	
 	  			
-	  			<div class=""><?php echo $usera->info ?></div>
+	  			<div class="p-info-text"><?php echo $usera->info ?></div>
   			</div>
   			<div class="p-photo">
-  				<span>Мои уроки:</span>
   			</div>
   			
   		</div>

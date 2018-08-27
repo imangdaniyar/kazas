@@ -113,7 +113,8 @@
 	height:13vw;
 	z-index: 9999;
 	overflow-y:scroll;
-	white-space: pre;
+	white-space: normal;
+	overflow-wrap: break-word;
 }
 .send-feed{
 	width: 10vw;

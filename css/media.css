@@ -137,7 +137,7 @@
 		left: 70%;
 	}
 	.footer{
-		height: 65%;
+		height: 80%;
 	}
 	.footer:after{
 		display: table;
@@ -169,7 +169,6 @@
 	.mail{
 		
 	}
-<<<<<<< HEAD
 	.mini{
 		width: 100%;
 		height: 300px;
@@ -206,7 +205,7 @@
 		height: 30px;
 	}
 	.f-button span{
-		font-size: 13px;
+		font-size: 12px;
 	}
 	
 	.grid-inst{
@@ -235,6 +234,7 @@
 	}
 	.as-name{
 		top:100px;
+		z-index: 99;
 	}
 	#scas{
 		height: 280px;
@@ -258,11 +258,52 @@
 		font-size: 30px!important;
 	}
 	.as-services span{
-		font-size: 15px;
+		font-size: 11px;
+	}
+	.make-com{
+		width: 90%;
+		height: 300px;
+	}
+	.com-label{
+		font-size: 20px;
+		top:7%;
+		left:30%;
+	}
+	.minis{
+		font-size: 10px;
+
+	}
+	.l1{
+		top:50%;
+		left:20%;
+	}
+	.l2{
+		top:55%;
+		left:20%;
+	}
+	.feedback{
+		width:190px;
+		height:100px;
+		font-size: 13px;
+		top:16%;
+		left: 20%;
+		overflow-x: hidden;
+		word-wrap: break-word;
+		max-width: 200px;
+		white-space: normal;
+	}
+	.send-feed{
+		top:80%;
+		left: 33%;
+		width: 100px;
+		height: 30px;
+		
+	}
+	.lol{
+		font-size: 12.5px;		
 	}
 
 
-=======
 /*---------------edu.php----------------------*/
 	.courses{
 	width: 100%;
@@ -312,6 +353,158 @@
 		margin: 0 auto;
 		background-color: #111;
 	}
+/*-----------------driver------------------------------*/
+	.d-profile{
+		display: grid;
+		grid-template-columns: 100%;
+		height: auto;
+	}
+	.d-left{
+		height: auto;
+	}
+	.d-ph{
+		height: 500px;
+	}
+	.d-ph-name{
+		font-size: 20px;
+	}
+	.d-feedback span{
+		font-size: 11px!important;
+	}
+	.d-right{
+		height: auto;
+	}
+	.d-title{
+		font-size: 20px;
+	}
+	.d-card{
+		height: auto;
+		width: 100%;
+	}
+	
+	.d-personal{
+		grid-template-columns: 49% 49%;
+		height: auto;
+		margin-left: 0%;
+		border-left: 0px solid silver!important;
 
->>>>>>> 60f9636cc308ed1a0b7297919b2c3fe94a7f1385
+	}
+	.d-info{
+		font-size: 16px;
+		color: #007aff;
+		border-bottom: 1px solid silver;
+
+	}
+	.personal-podrobno{
+		width: 98%;
+		height: auto;
+		border-left: 0vw solid #2C84C0;
+		margin-left: 0%;
+	}
+	.podrobno{
+		font-size: 16px;
+		color: #007aff;
+	}
+	.podrobno-info{
+		font-size: 16px;
+		margin-top: 10px;
+	}
+	.add{
+		width: 110%!important;;
+	}
+	.d-edit{
+		width: 100%;
+	}
+/*---------------make----------------*/
+		.i-note{
+			position: relative;
+			margin-left: 20px;
+			width: 300px;
+			height: auto;
+			font-size: 20px;
+			margin-bottom: 200px;
+		}
+		#title{
+			font-size: 20px;
+		}
+		.make-form{
+			width: 100%;
+			height: 500px;
+		}
+		.make-filter{
+			height: 40px;
+			width: 97%;		
+		}
+		.make-filter label, .make-filter div{
+			height: 30px;
+			font-size: 15px;
+		}
+		.make-filter select, .make-filter input{
+			height: 30px;
+			font-size: 13px;
+		}
+		.inp{
+			height: 30px;
+		}
+		#i-exp{
+			font-size: 20px;
+		}
+		.inp-label{
+			font-size: 10px!important;
+		}
+		.make-info{
+				height: auto;
+				font-size: 16px;
+		}
+/*--------profile--------------------------------*/
+.u-profile{
+	grid-template-columns: 99%;
+	height: auto;
 }
+.p-card{
+	grid-template-columns: 99%;
+	height: auto;
+	color: #007aff;
+}
+.p-title{
+	font-size: 20px;
+}
+.p-right{
+	height: auto;
+}
+.p-insts{
+	height: auto!important;
+}
+.p-active{
+	height: 300px;
+}
+.p-dis{
+	height: 300px;
+}
+.p-inst-active{
+	height: 30px;
+border:1px solid #82FA38;
+margin-bottom: 5px;
+}
+.pia-down{
+	font-size: 20px;
+}
+
+.p-inst-dis{
+		height: 30px;
+		border:1px solid red;
+}
+.p-inst-active a, .p-inst-dis a{
+		font-size: 20px;		
+}
+.pia-delete{
+	font-size: 20px;	
+}
+.pia-activate{
+	font-size: 20px;
+}
+.p-label{
+	font-size: 14px;
+
+}
+		
