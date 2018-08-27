@@ -495,6 +495,118 @@
 	.p-label{
 		font-size: 14px;
 	}
+	/*--------test.php--------------------------------*/
+	.test{
+		width: 100%;
+		height: 100%;
+		padding: 5% 0;
+		margin: 0;
+		padding-bottom: 100px;
+	}
+	.test-list{
+		list-style: none;
+	}
+	.answer{
+		margin: 5%;
+		font-size: 23px;
+	}
+	.question{
+		font-size: 23px;
+	}
+	.t-pics{
+		display: grid;
+		grid-gap: 10px;
+		margin: 1vw 0;
+		width: 90%;
+		height: 90%;
+		grid-template-columns: 1fr;
+	}
+	.t-pic{
+		width: 300px;
+		height: 300px;
+		background-color: gray;
+	}
+	.t-submit{
+		font-size: 20px;
+		width: 200px!important;
+		height: 50px;
+		margin-right: 20%;
+	}
+	/*--------auth.php--------------------------------*/
+	.loginform{
+		width: 300px;
+		min-height: 300px!important;
+		padding: 1vw;
+	}
+	.choise{
+		height: 40px;
+	}
+	.choise:after{
+		content: '';
+		clear: both;
+		display: table;
+	}
+	.choise span{
+		font-size: 16px;
+	}
+	.inp{
+		margin:20px;
+		margin-top: 40px;
+		width: 80%;
+		height: 20px;
+	}
+	.inp-er{
+		margin: 10px;
+		margin-top: 30px;
+		width: 80%;
+		height: 20px;
+	}
+	.inp input[type=text],.inp input[type=number],.inp input[type=password], .select-inp{
+		padding: 10px;
+		width: 100%;
+		height: 100%;
+		font-size: 16px;
+		border-bottom: 1px solid silver;
+	}
+	.inp-label{
+		font-size: 16px!important;
+		margin-left: 0.6vw;
+	}
+	.inp input:valid ~ label,
+	.inp input:focus ~ label{
+	    top:-1.8vw;
+	    font-size: 16px;
+	}
+	.in-submit,.up-submit{
+		width: 50%;
+		height: 2vw;
+		padding: 0.5vw;
+		margin:1vw;
+		font-size:1.2vw;
+	}
+	.up-submit{
+		font-size:1vw;
+	}
+	.in-submit span,.up-submit span{
+		position: absolute;
+		top:50%;
+		left: 50%;
+		transform:translate(-50%,-50%);
+	}
+
+	.in-submit:hover,.up-submit:hover{
+		background-color: #395ABD;
+	}
+	#errors{
+		color: red;
+		font-size: 16px;
+		font-family: 'Montserrat Alternates', sans-serif;
+	}
+	#error{
+		color: red;
+		font-size: 16px;
+		font-family: 'Montserrat Alternates', sans-serif;
+	}
 }
-}
+
 		

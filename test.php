@@ -23,7 +23,7 @@
       <li class="answer"><input type="radio" name="ans" id="ans2"><label for="ans2"> <?php echo $test->ans2; ?></label></li>
       <li class="answer"><input type="radio" name="ans" id="ans3"><label for="ans3"> <?php echo $test->ans3; ?></label></li> 
     </ul>
-    <a href="/test.php?id=<?php echo $nid ?>"><div class="in-submit" style="width: 20%;"><span>Следующий вопрос</span></div>
+    <a href="/test.php?id=<?php echo $nid ?>"><div class="in-submit t-submit" style="width: 20%;"><span>Следующий вопрос</span></div>
     </div>  </a>
 
     
