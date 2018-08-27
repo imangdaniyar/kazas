@@ -13,6 +13,9 @@
 	padding-top: 2vw;
 }
 .video{
+	width: 560px;
+	height: 315px;
 	text-align: center;
-	margin: 1vw;
+	margin: 1vw auto;
+	background-color: #111;
 }
