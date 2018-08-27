@@ -13,6 +13,12 @@
     
       <ul class="test-list">
       <li class="question"><?php echo $test->question; ?></li>
+      <li class="t-pics">
+      <div class="t-pic"><img src="" alt=""></div>
+      <div class="t-pic"><img src="" alt=""></div>
+      <div class="t-pic"><img src="" alt=""></div>
+      <div class="t-pic"><img src="" alt=""></div>
+      </li>
       <li class="answer"><input type="radio" name="ans" id="ans1"><label for="ans1"> <?php echo $test->ans1; ?></label></li>
       <li class="answer"><input type="radio" name="ans" id="ans2"><label for="ans2"> <?php echo $test->ans2; ?></label></li>
       <li class="answer"><input type="radio" name="ans" id="ans3"><label for="ans3"> <?php echo $test->ans3; ?></label></li> 
