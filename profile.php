@@ -6,10 +6,6 @@
     $dis_insts = R::findAll('insts','uid = ? AND active!="1"',[$_COOKIE['id']]);
     ?>
 
-	
-	
-
-
 <div class="container">
   <div class="u-profile">
   	<div class="p-left">

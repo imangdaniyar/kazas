@@ -6,32 +6,26 @@
   <div class="courses">
     <?php 
       foreach ($videos as $video) {
+        if ((int)$video->id == 1) {
           echo('<a href="/v-l.php?id='.$video->id.'" style="text-decoration: none; color: white">
       <div class="course">
         <span class="c-title">'.$video->title.'
         </span>
+        <span class="free">Бесплатно</span>
       </div>
     </a>');
+        } else{
+          echo('<a href="/v-l.php?id='.$video->id.'" style="text-decoration: none; color: white">
+      <div class="course" style="opacity: 0.9;">
+        <span class="c-title">'.$video->title.'
+        </span>
+        <span class="paid">Платно</span>
+      </div>
+    </a>');
+        }
       }
      ?>
-    <a href="/v-l.php" style="text-decoration: none; color: white">
-      <div class="course">
-        <span class="c-title">Общие положения
-        </span>
-      </div>
-    </a>
-    <a href="/v-l.php" style="text-decoration: none; color: white">
-      <div class="course">
-        <span class="c-title">Общие обязанности водителей
-        </span>
-      </div>
-    </a>
-    <a href="/v-l.php" style="text-decoration: none; color: white">
-      <div class="course">
-        <span class="c-title">Обязанности пешеходов
-        </span>
-      </div>
-    </a>
+    
   </div>
 </div>
 

@@ -169,6 +169,7 @@
 	.mail{
 		
 	}
+<<<<<<< HEAD
 	.mini{
 		width: 100%;
 		height: 300px;
@@ -261,4 +262,56 @@
 	}
 
 
+=======
+/*---------------edu.php----------------------*/
+	.courses{
+	width: 100%;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	grid-gap: 2%;
+	}
+	.course{
+	height: 250px;
+	}
+	.c-title{
+		font-size: 20px;
+	}
+	.paid{
+		font-size: 20px;
+		padding: 5px;
+	}
+	.free{
+		font-size: 20px;
+		padding: 5px;
+	}
+	.course:hover .c-title{
+	 	transition: 1s;
+	 	font-size: 20px;
+	}
+	.course:hover .paid{
+	 	transition: 1s;
+	 	font-size: 20px;
+	}
+	.course:hover .free{
+	 	transition: 1s;
+	 	font-size: 20px;
+	}
+/*---------------v-l.php----------------------*/
+	.v-lesson{
+		width: 100%;
+		padding-bottom: 30px;
+	}
+	.v-l-title{
+		font-size: 20px;
+		padding-top: 20px;
+	}
+	.video{
+		width: 100%;
+		height: 58.8%;
+		text-align: center;
+		margin: 0 auto;
+		background-color: #111;
+	}
+
+>>>>>>> 60f9636cc308ed1a0b7297919b2c3fe94a7f1385
 }
