@@ -25,7 +25,7 @@
 					</select></div>
 				<div class="filter">
 					<label for="city" class="filter-label">Стаж интсруктора</label>
-					<div><input style="color:#000; height: 0.7vw" type="number" min="0" value="0" id="inst-exp"> лет</div>
+					<div><input class="num" type="number" min="0" value="0" id="inst-exp"> лет</div>
 				</div>
 				<div class="filter">
 					<label for="city" class="filter-label">Своя машина</label>

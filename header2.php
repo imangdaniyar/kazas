@@ -61,7 +61,7 @@ if ( !R::testConnection() )
 </head>
 <body>
 <input type="checkbox" name="check" id="check">
-	<label class="burger" for="check">+</label>
+	<label class="burger" for="check"><div class="relative" ><span class="icon-burger"></span></div></label>
 <div class="header2">
 	<div class="logo">
 		<a href="index.php"><div class="logo-container">

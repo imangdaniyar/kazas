@@ -9,15 +9,30 @@
 		align-items: center;
 		transition: 1s;
 	}
+	.logo{
+		width: 100%;
+	}
 		.header2{
 		height:500px;
 		position: fixed;
 		top:-450px;
-		background-color: white;
+		background-color: #007aff;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		transition: 1s;
+	}
+	.fixed{
+		background-color: #007aff;
+	}
+	.logo-subtitle{
+		display: none;
+	}
+	.logo-title{
+		color:#fff;
+		font-size: 30px;
+		margin-top:3px;
+
 	}
 	#check:checked ~ .header{
 		transform: translateY(450px);
@@ -26,6 +41,25 @@
 	#check:checked ~ .header2{
 		transform: translateY(450px);
 		background-color: white;
+	}
+	#check:checked ~  .burger .icon-burger:before{
+		display: none;
+		transition: 1s;
+	}
+	#check:checked ~  .burger .icon-burger:after{
+		top:2px;
+		left: 1px;
+		transition: 1s;
+		transform: rotateZ(90deg);	
+	}
+	#check:checked ~  .burger .icon-burger{
+		top:11px;
+		left: 5px;
+		transform: rotateZ(45deg);
+		transition: 1s;
+	}
+	#check:checked ~ .logo-title{
+		color: #007aff!important;
 	}
 	.logo{
 		float: none;
@@ -135,4 +169,96 @@
 	.mail{
 		
 	}
+	.mini{
+		width: 100%;
+		height: 300px;
+		font-size: 20px!important;
+	}
+	.give{
+	width: 100%;
+	height: 30px;
+	margin-bottom: 20px;
+	}
+
+	.g-button{
+		height: 100%;
+		font-size: 15px;
+	}
+	.filter{
+		height: 30px;
+	}
+	.filter label, .filter div{
+		font-size: 14px;
+	font-weight: bold;
+	}
+	.filter select, .filter input{
+		height: 20px;
+		font-size: 12px;
+		border:1px solid #007aff;
+	}
+	.num{
+		height: 15px;
+		font-size: 12px;
+		border:1px solid #007aff;
+	}
+	.f-button{
+		height: 30px;
+	}
+	.f-button span{
+		font-size: 13px;
+	}
+	
+	.grid-inst{
+		grid-template-columns:1fr;
+		width: 100%;
+		height: auto;
+	}
+	.card-container{
+		height: 300px;
+
+	}
+	.inst-card{
+		border:1px solid gray;
+	}
+	.card-row{
+		border-bottom: 1px solid gray;
+	}
+	.c-col1{
+		font-size: 20px;
+	}
+	.c-col2{
+		font-size: 20px;
+	}	
+	.inst-res{
+		font-size: 30px!important;
+	}
+	.as-name{
+		top:100px;
+	}
+	#scas{
+		height: 280px;
+	}
+	.sias{
+		height: 100%;
+		width: 100%;
+	}
+	.profile{
+		grid-template-columns: 1fr;
+		width: 95%;
+		font-size: 20px;
+	}
+	.as-info span{
+		font-size: 30px!important;
+	}
+	.as-services{
+		min-height: 300px;
+	}
+	#asss{
+		font-size: 30px!important;
+	}
+	.as-services span{
+		font-size: 15px;
+	}
+
+
 }

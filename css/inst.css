@@ -68,7 +68,6 @@
 }
 div{
 font-family: 'Montserrat Alternates', sans-serif;
-	font-size: 1vw;
 }
 .filter select, .filter input{
 	width: 100%;
@@ -86,6 +85,12 @@ font-family: 'Montserrat Alternates', sans-serif;
 	float: left;
 	height: 1.2vw;
 
+}
+.inst-res{
+	width:100%; height:50vh;
+}
+.num{
+	color:#000; height: 0.7vw;
 }
 .inst-card{
 	border-radius: 0.5vw;

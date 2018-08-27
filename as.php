@@ -21,13 +21,13 @@ if($_GET){
         <?php echo $as->name ?>
       </span>
     </div>
-    <div class="swiper-container">
+    <div class="swiper-container" style="margin-top: 0vw;" id="scas">
     <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
+      <div class="swiper-wrapper" >
         <!-- Slides -->
         <?php if($images){
           foreach ($images as $image) {
-            echo ('<div class="swiper-slide"><img class="slide-image" src="images/'.$image->name.'" alt=""></div>');
+            echo ('<div class="swiper-slide"><img class="slide-image sias" src="images/'.$image->name.'" alt=""></div>');
           }
         }else{
           echo('<div class="swiper-slide"><img class="slide-image" src="images/noimage.jpg" alt=""></div>');
@@ -64,7 +64,7 @@ if($_GET){
         </div>
 
         <div class="as-services">
-          <span style="font-size: 1.5vw;">Отзывы</span>
+          <span id="asss" style="font-size: 1.5vw;">Отзывы</span>
           <ul class="services" id="a-comments">
           <?php foreach ($comments as $com) {
             $user = R::findOne('users','id = ?',[$com->uid]);
