@@ -4,8 +4,6 @@
   <div class="make-question-form" style="padding-top: 2vw; padding-bottom: 5vw;">
     <div class="inp"><input type="text" id="question" placeholder="Вопрос">
     </div>
-    <div class="inp"><input type="text" id="question" placeholder="Вопрос">
-    </div>
     <div class="inp"><input type="text" id="ans1" placeholder="Ответ 1 Правильный"></div>
     <div class="inp"><input type="text" id="ans2" placeholder="Ответ 2"></div>
     <div class="inp"><input type="text" id="ans3" placeholder="Ответ 3"></div>
