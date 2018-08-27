@@ -7,7 +7,7 @@
     <?php 
       foreach ($videos as $video) {
         if ((int)$video->id == 1) {
-          echo('<a href="/testdb.php?id='.$video->id.'" style="text-decoration: none; color: white">
+          echo('<a href="/v-l.php?id='.$video->id.'" style="text-decoration: none; color: white">
       <div class="course">
         <span class="c-title">'.$video->title.'
         </span>
@@ -15,7 +15,7 @@
       </div>
     </a>');
         } else{
-          echo('<a href="/testdb.php?id='.$video->id.'" style="text-decoration: none; color: white">
+          echo('<a href="/v-l.php?id='.$video->id.'" style="text-decoration: none; color: white">
       <div class="course" style="opacity: 0.9;">
         <span class="c-title">'.$video->title.'
         </span>
