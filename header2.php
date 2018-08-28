@@ -85,7 +85,7 @@ if ( !R::testConnection() )
 				<a href="/logout.php" class="nav-link"><i class="fas fa-sign-out-alt"><span> Выход</span></i></a>
 			</div>
 		</li>
-		<input type="text" class="hidden" name="" id="id" value="<?php echo $_COOKIE['id']; ?>">
+		<input class="disabled" type="hidden" class="hidden" name="" id="id" value="<?php echo $_COOKIE['id']; ?>">
 		<?php else: ?>
 		<li class="nav-item"><a href="/auth.php" class="nav-link"><i class="fas fa-sign-in-alt"><span> Вход</span></i></a></li>
 		<?php endif ?>
