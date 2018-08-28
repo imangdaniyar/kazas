@@ -610,6 +610,7 @@
 	.loginform{
 		width: 300px;
 		min-height: 300px!important;
+		height: 600px!important;
 		padding: 1vw;
 	}
 	.choise{
@@ -643,8 +644,6 @@
 		border-bottom: 1px solid silver;
 	}
 	.inp-label{
-		font-size: 16px!important;
-		margin-left: 0.6vw;
 	}
 	.inp input:valid ~ label,
 	.inp input:focus ~ label{
@@ -652,15 +651,16 @@
 	    font-size: 16px;
 	}
 	.in-submit,.up-submit{
-		width: 50%;
-		height: 2vw;
-		padding: 0.5vw;
-		margin:1vw;
-		font-size:1.2vw;
+		width: 70%;
+		height: 20px;
+		padding: 5px;
+		margin-top: 70px;
+		font-size:16px!important;
 	}
 	.up-submit{
 		font-size:1vw;
 	}
+<<<<<<< HEAD
 	.in-submit span,.up-submit span{
 		position: absolute;
 		top:50%;
@@ -670,18 +670,16 @@
 		        transform:translate(-50%,-50%);
 	}
 
+=======
+>>>>>>> 1aad7066629b858fea6ec4e6c4d7a6ba67cff748
 	.in-submit:hover,.up-submit:hover{
 		background-color: #395ABD;
 	}
 	#errors{
-		color: red;
 		font-size: 16px;
-		font-family: 'Montserrat Alternates', sans-serif;
 	}
 	#error{
-		color: red;
-		font-size: 16px;
-		font-family: 'Montserrat Alternates', sans-serif;
+		font-size: 16px	;
 	}
 }
 
