@@ -6,7 +6,7 @@
   <div class="courses">
     <?php 
       foreach ($videos as $video) {
-          echo('<a href="/testdb.php?id='.$video->id.'" style="text-decoration: none; color: white">
+          echo('<a href="/videodb.php?id='.$video->id.'" style="text-decoration: none; color: white">
       <div class="course">
         <span class="c-title">'.$video->title.'
         </span>
