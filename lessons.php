@@ -6,11 +6,12 @@
   <div class="courses">
     <?php 
       foreach ($videos as $video) {
-        if ((int)$video->id == 1) {
+        if ((int)$video->free == 1) {
           echo('<a href="/v-l.php?id='.$video->id.'" style="text-decoration: none; color: white">
       <div class="course">
         <span class="c-title">'.$video->title.'
         </span>
+        <div class="lesson-image"><img class="lesson-pic" src="lesson.png" alt="тесты и видео по пдд"></div>
         <span class="free">Бесплатно</span>
       </div>
     </a>');
@@ -19,6 +20,7 @@
       <div class="course" style="opacity: 0.9;">
         <span class="c-title">'.$video->title.'
         </span>
+        <div class="lesson-image"><img class="lesson-pic" src="lesson.png" alt="тесты и видео по пдд"></div>
         <span class="paid">Платно</span>
       </div>
     </a>');

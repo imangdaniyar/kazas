@@ -13,7 +13,7 @@ if ( !R::testConnection() )
 		if($f == 'all'){
 			$autos  = R::findAll( 'autos' );
 		}elseif($f == 'no'){
-			$autos = R::findAll('autos','city != "Астана" AND city != "Алматы" AND city != "Уральск" AND city != "Шымкент" AND city != "Актау" AND city != "Атырау" ');
+			$autos = R::findAll('autos','city != "Астана" AND city != "Алматы" AND city != "Уральск" AND city != "Шымкент" AND city != "Актау" AND city != "Атырау" AND city != "Актобе" AND city != "Караганда" AND city != "Костанай" AND city != "Кокшетау" AND city != "Кызылорда" AND city != "Павлодар" AND city != "Петропавлоск" AND city != "Талдыкорган" AND city != "Тараз" AND city != "Туркестан" AND city != "Усть-Каменогорск" AND city != "Семей" ');
 			
 		}else {
 			$autos  = R::findAll( 'autos' , 'city = ?', [$f]);

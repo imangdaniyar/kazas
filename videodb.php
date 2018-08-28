@@ -3,9 +3,9 @@
 <div class="container nm" style="background-color: lightgray;">
     <input type="hidden" value="<?php   echo $_GET[id]; ?> " id="tid"    >
     <div class="make-question-form" style="padding-top: 2vw; padding-bottom: 5vw;">
-    <div class="inp"><input type="text" id="question" placeholder="Ссылка на видео">
+    <div class="inp"><input type="text" id="video_url" placeholder="Ссылка на видео">
     </div>
-    <div class="in-submit" onclick="up_test($('#tid').val())" style="width: 15%;"><span>Отправить</span></div>
+    <div class="in-submit" onclick="up_video($('#tid').val());" style="width: 15%;"><span>Отправить</span></div>
   </div>  
 </div>
 

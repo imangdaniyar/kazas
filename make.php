@@ -14,12 +14,25 @@
         <label for="city" class="filter-label">Выберете город</label>
         <select name="city" value="Выберете город" id="i-city">
             <option selected="true" value="all">Все</option>
-            <option  value="Астана">Астана</option>
-            <option value="Алматы">Алматы</option>
-            <option value="Уральск">Уральск</option>
-            <option value="Шымкент">Шымкент</option>
-            <option value="Актау">Актау</option>
-            <option value="other">Другой</option>
+        <option  value="Астана">Астана</option>
+        <option value="Алматы">Алматы</option>
+        <option value="Актау">Актау</option>
+        <option value="Атырау">Атырау</option>
+        <option value="Актобе">Актобе</option>
+        <option value="Караганда">Караганда</option>
+        <option value="Кокшетау">Кокшетау</option>
+        <option value="Костанай">Костанай</option>
+        <option value="Кызылорда">Кызылорда</option>
+        <option value="Павлодар">Павлодар</option>
+        <option value="Петропавловск">Петропавловск</option>
+        <option value="Семей">Семей</option>
+        <option value="Талдыкорган">Талдыкорган</option>
+        <option value="Тараз">Тараз</option>
+        <option value="Туркестан">Туркестан</option>
+        <option value="Уральск">Уральск</option>
+        <option value="Усть-Каменогорск">Усть-Каменогорск</option>
+        <option value="Шымкент">Шымкент</option>
+        <option value="other">Другой</option>
           </select>
       </div>
       <div class="inp" style="display: none;">

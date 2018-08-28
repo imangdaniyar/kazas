@@ -2,18 +2,18 @@
 <?php 
 	$autos  = R::findAll( 'autos' );
  ?>
-	<div class="swiper-container">
+	<div class="swiper-container" id="scm">
     <!-- Additional required wrapper -->
     	<div class="swiper-wrapper">
         <!-- Slides -->
         	<div class="swiper-slide">
-        		<img class="slide-image" src="slider/slide1.jpg" alt=""><div class="slider-label"><span class="label">Подготовка к экзаменам онлайн</span><span class="sublabel">Мы приготовили для вас специальные видеоуроки и тестовые задания, которые помогут Вам успешно сдать ,как теоритическую, так и практическую часть экзамена на получение прав разных классификаций</span><div onclick="alert('123');" class="slider-button"><span>Продолжить</span></div></div>
+        		<img class="slide-image" src="slider/slide1.jpg" alt=""><div class="slider-label"><span class="label">Подготовка к экзаменам онлайн</span><span class="sublabel">Мы приготовили для вас специальные, как платные, так и бесплатные видеоуроки и тестовые задания, которые помогут Вам успешно сдать ,как теоритическую, так и практическую часть экзамена на получение прав разных классификаций, для этого мы создали очень удобный и дружелюбный интрефейс</span><div onclick="location.replace('lessons.php')" class="slider-button"><span>Продолжить</span></div></div>
 				
 
         	</div>
-        	<div class="swiper-slide"><img class="slide-image" src="slider/slide2.jpg" alt=""><div class="slider-label"><span class="label">Зарекомендуй себя как профессионального инструктора</span><span class="sublabel">Зарегестрийруйтесь и зарекомендуйте себя как профессионала своего дела, расскажите о себе и докажите, что именно Вы можете научить любого желающего вне зависимости от его опыта</span><div onclick="alert('123');" class="slider-button"><span>Подробнее</span></div></div></div>
+        	<div class="swiper-slide"><img class="slide-image" src="slider/slide2.jpg" alt=""><div class="slider-label"><span class="label">Зарекомендуй себя как профессионального инструктора</span><span class="sublabel">Зарегестрийруйтесь и зарекомендуйте себя как профессионала своего дела, расскажите о себе и докажите, что именно Вы можете научить любого желающего вне зависимости от его опыта</span><div onclick="location.replace('make.php')" class="slider-button"><span>Продолжить</span></div></div></div>
 
-        	<div class="swiper-slide"><img class="slide-image" src="slider/slide3.jpg" alt=""><div class="slider-label"><span class="label">Зарегистрируйте свою автошколу</span><span class="sublabel">Это отличный способ привлечения новых студентов, квалифицированных преподавателей и опытных водителей.</span><div onclick="alert('123');" class="slider-button"><span>Добавить автошколу</span></div></div></div>
+        	<div class="swiper-slide"><img class="slide-image" src="slider/slide3.jpg" alt=""><div class="slider-label"><span class="label">Найдите автошколу для себя</span><span class="sublabel">Найдите не только ближайшую, но самую привлекательную для вас автошколу, оставьте или почитайте отзывы, узнайте какая автошкола подходит именно вам.</span><a href="#as"><div class="slider-button"><span>Найти автошколу</span></div></a></div></div>
         
    		</div>
     <!-- If we need pagination -->
@@ -30,10 +30,22 @@
 				<option selected="true" value="all">Все</option>
 				<option  value="Астана">Астана</option>
 				<option value="Алматы">Алматы</option>
-				<option value="Уральск">Уральск</option>
-				<option value="Шымкент">Шымкент</option>
-				<option value="Актау">Актау</option>
-				<option value="Атырау">Атырау</option>
+        <option value="Актау">Актау</option>
+        <option value="Атырау">Атырау</option>
+        <option value="Актобе">Актобе</option>
+				<option value="Караганда">Караганда</option>
+        <option value="Кокшетау">Кокшетау</option>
+        <option value="Костанай">Костанай</option>
+        <option value="Кызылорда">Кызылорда</option>
+        <option value="Павлодар">Павлодар</option>
+        <option value="Петропавловск">Петропавловск</option>
+        <option value="Семей">Семей</option>
+        <option value="Талдыкорган">Талдыкорган</option>
+        <option value="Тараз">Тараз</option>
+        <option value="Туркестан">Туркестан</option>
+        <option value="Уральск">Уральск</option>
+        <option value="Усть-Каменогорск">Усть-Каменогорск</option>
+        <option value="Шымкент">Шымкент</option>
 				<option value="no">Нет в списке</option>
 			</select>
 		</div>
@@ -54,7 +66,7 @@
 			echo('<a href="as.php?id='.$auto->id.'"><div class="card">
         '.$img.'
         <span class="card-title">'.$auto->name.'</span>
-        <hr style="border: 0.05vw solid gray; width:80%;">
+        <br>
         <span class="card-content">
           город: '.$auto->city.'
         </span>

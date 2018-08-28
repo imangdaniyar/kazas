@@ -122,6 +122,11 @@
 }
 .p-i{
 	font-family: 'Montserrat Alternates', sans-serif;
+	white-space: normal;
+}
+.p-i div{
+	white-space: normal;
+	font-size: 1vw;
 }
 .d-edit{
 	width: 90%;

@@ -7,7 +7,7 @@ if ( !R::testConnection() )
 {
         exit ('Нет соединения с базой данных');
 } else{
-	if($_POST){
+	if($_POST['q']){
 		$d = $_POST;
 		$f = $_FILES;
 		$test = R::dispense('test');
@@ -116,6 +116,14 @@ if ( !R::testConnection() )
 		}
 		exit('ok');
 
+	}
+
+
+	if($_POST['vid']){
+		$v = R::load('theory',$_POST['vid']);
+		$v->video = $_POST['video'];
+		R::store($v);
+		exit('ok');
 	}
 
 

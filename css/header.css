@@ -75,6 +75,9 @@
 	right: 5%;
 	z-index: 9999;
 	display: none;
+	-webkit-transition: 1s;
+		-o-transition: 1s;
+		transition: 1s;
 }
 .logo{
 	width: 30%;

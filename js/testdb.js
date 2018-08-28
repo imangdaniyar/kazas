@@ -42,3 +42,36 @@ function 	up_test(id) {
       }
 		});
 }
+
+
+function  up_video(id) {
+  form.append('vid',id);
+  form.append('video',$('#video_url').val());
+  $.ajax({
+      url: '/addtest.php',
+      type: "POST",
+      cache:false,
+      contentType: false, // важно - убираем форматирование данных по умолчанию
+      processData: false, // важно - убираем преобразование строк по умолчанию
+      data: form,
+      beforeSend: function() {
+        // setting a timeout
+           $('.container').addClass('disabled');
+            
+        },
+      success: function(response){
+        console.log(response);
+        if(response == 'ok'){
+          location.reload();
+        }
+        
+      }
+    });
+}
+
+
+
+
+
+
+
