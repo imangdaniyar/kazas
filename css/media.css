@@ -660,7 +660,7 @@
 	.up-submit{
 		font-size:1vw;
 	}
-<<<<<<< HEAD
+
 	.in-submit span,.up-submit span{
 		position: absolute;
 		top:50%;
@@ -670,8 +670,7 @@
 		        transform:translate(-50%,-50%);
 	}
 
-=======
->>>>>>> 1aad7066629b858fea6ec4e6c4d7a6ba67cff748
+
 	.in-submit:hover,.up-submit:hover{
 		background-color: #395ABD;
 	}
