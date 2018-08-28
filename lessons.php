@@ -4,6 +4,14 @@
 
 <div class="container nm">
   <div class="courses">
+    <a href="/files/pdd.pdf" style="text-decoration: none; color: white">
+      <div class="course">
+        <span class="c-title">Правила Дорожного Движения Республики Казахстан
+        </span>
+        <div class="lesson-image"><img class="lesson-pic" src="lesson.png" alt="тесты и видео по пдд"></div>
+        <span class="free">Бесплатно</span>
+      </div>
+    </a>
     <?php 
       foreach ($videos as $video) {
         if ((int)$video->free == 1) {
