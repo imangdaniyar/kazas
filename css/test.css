@@ -1,7 +1,7 @@
 .test{
 	width: 90%;
-	height: 30vw;
-	background-color: lightgray;
+	height: 100%;
+	background-color: #EAF2FB;
 	padding: 5%;
 }
 .test-list{
@@ -23,7 +23,35 @@
 	    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .t-pic{
-	width: 100%;
+	max-width: 100%;
 	height: 10vw;
 	background-color: gray;
+}
+.t-img{
+	width: 100%;
+	height: 100%;
+}
+.t-title{
+	font-size: 3vw;
+	color: #007aff;
+}
+.t-button{
+	background-color: #007aff;
+	width: 20vw;
+	margin:2vw;
+	float: left;
+	padding:1vw;
+	border-radius: 2vw;
+	cursor: pointer;
+
+}
+.test:after{
+	content: '';
+	display: table;
+	clear: both;
+}
+.t-results{
+	float: left;
+	text-align: center;
+	margin-top: 3vw;
 }

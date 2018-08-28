@@ -53,6 +53,11 @@
 	  			<div class="p-info-text"><?php echo $usera->info ?></div>
   			</div>
   			<div class="p-photo">
+          <?php if($_COOKIE['id'] == '1'): ?>
+          <button onclick="location.replace('make-test.php');">Добавить тест</button>
+           <button onclick="location.replace('make-video.php');">Добавить видео</button>
+
+          <?php endif ?>
   			</div>
   			
   		</div>
