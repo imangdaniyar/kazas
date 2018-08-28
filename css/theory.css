@@ -2,7 +2,8 @@
 	background-color: lightgray;
 	height: auto;
 	width: 100%;
-	box-shadow: 0 0 1vw gray;
+	-webkit-box-shadow: 0 0 1vw gray;
+	        box-shadow: 0 0 1vw gray;
 	padding-bottom: 5vw;
 }
 .th-title{

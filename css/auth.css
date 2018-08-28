@@ -3,15 +3,19 @@
 	width: 25vw;
 	min-height: 20vw;
 	background-color: #162034;
-	border-radius: 2vw;
+	-webkit-border-radius: 2vw;
+	        border-radius: 2vw;
 	padding: 1vw;
 	position: relative;
+	-webkit-transition:1s;
+	-o-transition:1s;
 	transition:1s;
 }
 .choise{
 	margin:1vw auto;
 	width: 80%;
-	border-radius: 2vw;
+	-webkit-border-radius: 2vw;
+	        border-radius: 2vw;
 	overflow: hidden;
 	height: 2.3vw;
 	cursor: pointer;
@@ -29,6 +33,8 @@
 	float: left;
 	font-family: 'Montserrat Alternates', sans-serif;
 	position: relative;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
 	transition: 0.5s;
 }
 .signin:after{
@@ -44,6 +50,8 @@
 	background-color: #395ABD;
 	font-family: 'Montserrat Alternates', sans-serif;
 	position: relative;
+	-webkit-transition: 0.1s;
+	-o-transition: 0.1s;
 	transition: 0.1s;
 }
 .choise span{
@@ -52,16 +60,22 @@
 	position: absolute;
 	top:50%;
 	left: 50%;
-	transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	    -ms-transform:translate(-50%,-50%);
+	        transform:translate(-50%,-50%);
 	color: lightgray;
 	
 
 }
 .hovered{
 	opacity: 0.8;
+	-webkit-transition: 0.1s;
+	-o-transition: 0.1s;
 	transition: 0.1s;
 }
 .active{
+	-webkit-transition: 0.1s;
+	-o-transition: 0.1s;
 	transition: 0.1s;
 	background-color: #007AFF;
 }
@@ -104,6 +118,8 @@
 	font-size:1.2vw;
 	font-family: 'Montserrat Alternates', sans-serif;
 	margin-left: 0.6vw;
+	-webkit-transition: 0.7s;
+	-o-transition: 0.7s;
 	transition: 0.7s;
 }
 .inp input:valid ~ label,
@@ -117,7 +133,8 @@
 	height: 2vw;
 	background-color: #007aff;
 	float: right;
-	border-radius: 2vw;
+	-webkit-border-radius: 2vw;
+	        border-radius: 2vw;
 	padding: 0.5vw;
 	margin:1vw;
 	font-size:1.2vw;
@@ -134,7 +151,9 @@
 	position: absolute;
 	top:50%;
 	left: 50%;
-	transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	    -ms-transform:translate(-50%,-50%);
+	        transform:translate(-50%,-50%);
 }
 
 .in-submit:hover,.up-submit:hover{

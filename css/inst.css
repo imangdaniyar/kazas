@@ -1,8 +1,12 @@
 .grid-inst{
+	display: -ms-grid;
 	display: grid;
-	grid-template-columns: 33% 33%
+	-ms-grid-template-columns: 33% 33%
 	33% ;
-	grid-template-rows: auto;
+	    grid-template-columns: 33% 33%
+	33% ;
+	-ms-grid-template-rows: auto;
+	    grid-template-rows: auto;
 	height: auto;
 	grid-gap: 2vw;
 	width: 60%;
@@ -36,26 +40,36 @@
 	position: absolute;
 	top:50%;
 	left: 50%;
-	transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	    -ms-transform:translate(-50%,-50%);
+	        transform:translate(-50%,-50%);
 	padding: 1vw;
 	background-color: #007aff;
 	font-family: 'Montserrat Alternates', sans-serif;
 	font-size: 1.3vw;
-	border-radius: 2vw;
+	-webkit-border-radius: 2vw;
+	        border-radius: 2vw;
 	color:#fff;
 	cursor: pointer;
+		-webkit-transition: 0.3s;
+		-o-transition: 0.3s;
 		transition: 0.3s;
 
 }
 .g-button:hover{
 	opacity: 0.6;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
 	transition: 0.3s;
 }
 .filter{
 	margin-top: 2vw;
+	display: -ms-grid;
 	display: grid;
-	grid-template-columns: 55% 45%;
-	grid-template-rows: auto;
+	-ms-grid-template-columns: 55% 45%;
+	    grid-template-columns: 55% 45%;
+	-ms-grid-template-rows: auto;
+	    grid-template-rows: auto;
 	height: auto;
 	border-bottom: 0.1vw solid silver;
 	width: 100%;
@@ -68,6 +82,7 @@
 }
 div{
 font-family: 'Montserrat Alternates', sans-serif;
+font-size: 1.3vw;
 }
 .filter select, .filter input{
 	width: 100%;
@@ -75,7 +90,8 @@ font-family: 'Montserrat Alternates', sans-serif;
 	height: 2vw;
 	font-family: 'Montserrat Alternates', sans-serif;
 	font-size: 1vw;
-	border-radius: 2vw;
+	-webkit-border-radius: 2vw;
+	        border-radius: 2vw;
 	outline: none;
 	padding-left: 1vw;
 	border:0.1vw solid #007aff;
@@ -93,29 +109,38 @@ font-family: 'Montserrat Alternates', sans-serif;
 	color:#000; height: 0.7vw;
 }
 .inst-card{
-	border-radius: 0.5vw;
+	-webkit-border-radius: 0.5vw;
+	        border-radius: 0.5vw;
 	border:0.1vw solid gray;
 	overflow: hidden;
 	cursor: pointer;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
 	transition: 0.3s;
 	padding-bottom: 0.5vw;
-	box-shadow: 0.8vw 0.8vw 2vw;
+	-webkit-box-shadow: 0.8vw 0.8vw 2vw;
+	        box-shadow: 0.8vw 0.8vw 2vw;
 	color:gray;
 
 }
 .inst-card:hover{
 	opacity:0.5;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
 	transition: 0.3s;
 }
 .card-container{
-	grid-template-columns: 100%;
-	grid-template-rows: 40% 16% 16% 16%;
+	-ms-grid-template-columns: 100%;
+	    grid-template-columns: 100%;
+	-ms-grid-template-rows: 40% 16% 16% 16%;
+	    grid-template-rows: 40% 16% 16% 16%;
 	height: 12vw;
 }
 .card-picture{
 	width: 100%;
 	height: 100%;
-	border-radius: 0.5vw 0.5vw 0.5vw 0.5vw;
+	-webkit-border-radius: 0.5vw 0.5vw 0.5vw 0.5vw;
+	        border-radius: 0.5vw 0.5vw 0.5vw 0.5vw;
 }
 .card-row{
 	border-bottom: 0.1vw solid gray;
@@ -127,8 +152,10 @@ font-family: 'Montserrat Alternates', sans-serif;
 	height: 90%; 
 }
 .div{
-	grid-template-columns: 50%;
-	grid-template-rows: auto;
+	-ms-grid-template-columns: 50%;
+	    grid-template-columns: 50%;
+	-ms-grid-template-rows: auto;
+	    grid-template-rows: auto;
 	height: auto;
 	width: 100%;
 }
@@ -154,7 +181,8 @@ font-family: 'Montserrat Alternates', sans-serif;
 	font-family: 'Montserrat Alternates', sans-serif;
 	background-color: #007aff;
 	margin-top: -1vw;
-	border-radius: 2vw;
+	-webkit-border-radius: 2vw;
+	        border-radius: 2vw;
 	position: relative;
 	cursor: pointer;
 }
@@ -162,7 +190,9 @@ font-family: 'Montserrat Alternates', sans-serif;
 	position: absolute;
 	top:50%;
 	left: 50%;
-	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	    -ms-transform: translate(-50%,-50%);
+	        transform: translate(-50%,-50%);
 }
 .f-button:hover {
 	opacity: 0.5;

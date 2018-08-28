@@ -14,11 +14,13 @@
 	font-size: 1.5vw;
 }
 .t-pics{
+	display: -ms-grid;
 	display: grid;
 	grid-gap: 2%;
 	margin: 1vw 0;
 	width: 90%;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	-ms-grid-template-columns: 1fr 1fr 1fr 1fr;
+	    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .t-pic{
 	width: 100%;

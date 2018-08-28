@@ -28,6 +28,7 @@ if ( !R::testConnection() )
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Autoschool</title>
 	<script
   src="http://code.jquery.com/jquery-3.3.1.min.js"
@@ -59,6 +60,7 @@ if ( !R::testConnection() )
 		}
 	}
 </style>
+
 </head>
 <body>
 <input type="checkbox" name="check" id="check">

@@ -310,6 +310,7 @@ var login = $('#in-login').val().trim().toLowerCase();
     		},
         		success: function(response) {
             		var obj = jQuery.parseJSON(response);
+            		$('.container').removeClass('disabled');
             		if (obj.ans==='0'){
             			$('.loginform').css('height','25vw');
 		$('.inp-er').show();

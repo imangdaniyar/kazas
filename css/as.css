@@ -3,7 +3,9 @@
 	z-index: 999;
 	top:35%;
 	left: 50%;
-	transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	    -ms-transform:translate(-50%,-50%);
+	        transform:translate(-50%,-50%);
 	font-family: 'Montserrat Alternates', sans-serif;
 	color: #DFE0DF;
 	font-weight: bold;
@@ -14,8 +16,11 @@
 	width: 94vw;
 	margin:0 auto;	
 	font-family: 'Montserrat Alternates', sans-serif;
+	display: -ms-grid;
 	display: grid;
-	grid-template-columns: 50% 50%;
+	-ms-grid-template-columns: 50% 50%;
+	    -ms-grid-template-columns: 50% 50%;
+	    grid-template-columns: 50% 50%;
 	padding: 2vw;
 }
 .as-info{
@@ -45,11 +50,17 @@
 	margin:1vw auto;
 	padding: 0.5vw;
 	max-width: 98%;
-	border-radius: 0.5vw;
+	-webkit-border-radius: 0.5vw;
+	        border-radius: 0.5vw;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
 	transition: 0.5s;
 	min-height: 2vw;
+	display: -ms-grid;
 	display: grid;
-	grid-template-rows: 10% 90%;
+	-ms-grid-template-rows: 10% 90%;
+	    -ms-grid-template-rows: 10% 90%;
+	    grid-template-rows: 10% 90%;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	display: block;
@@ -119,7 +130,8 @@
 .send-feed{
 	width: 10vw;
 	height: 3.5vw;
-	border-radius: 2vw;
+	-webkit-border-radius: 2vw;
+	        border-radius: 2vw;
 	background-color: #007aff;
 	color:white;
 	font-size: 1vw;

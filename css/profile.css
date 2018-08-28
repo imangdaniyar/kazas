@@ -1,6 +1,8 @@
 .u-profile{
+	display: -ms-grid;
 	display: grid;
-	grid-template-columns: 70% 30%;
+	-ms-grid-template-columns: 70% 30%;
+	    grid-template-columns: 70% 30%;
 	height: 30vw;
 	width: 100%;
 	position: relative;
@@ -8,7 +10,8 @@
 }
 .p-left{
 	background-color: #F6F3F7;
-	box-shadow: 0 0 1vw gray;
+	-webkit-box-shadow: 0 0 1vw gray;
+	        box-shadow: 0 0 1vw gray;
 
 }
 .p-title{
@@ -27,15 +30,19 @@
 	width: 91%;
 }
 .p-card{
+	display: -ms-grid;
 	display: grid;
-	grid-template-columns: 50% 50%;
+	-ms-grid-template-columns: 50% 50%;
+	    grid-template-columns: 50% 50%;
 	width: 96%;
 	position: relative;
 	margin-top: 1vw;
 }
 .p-personal{
+	display: -ms-grid;
 	display: grid;
-	grid-template-columns: 50% 50%;
+	-ms-grid-template-columns: 50% 50%;
+	    grid-template-columns: 50% 50%;
 	width: 100%;
 	position: relative;
 }
@@ -54,7 +61,8 @@
 
 .p-right{
 	background-color: #3B5998;
-	box-shadow: 0 0 1vw gray;
+	-webkit-box-shadow: 0 0 1vw gray;
+	        box-shadow: 0 0 1vw gray;
 }
 .p-insts{
 	width: 100% !important;
@@ -75,11 +83,13 @@
 	
 	width: 100%;
 	overflow-y: scroll;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 .p-dis{
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 	height: 50%;
 	width: 100%;
 	overflow-y: scroll;
@@ -93,9 +103,12 @@
 	font-size: 1vw;
 	padding: 0.3vw;
 	margin-top: 0.3vw;
-	border-radius: 2vw;
+	-webkit-border-radius: 2vw;
+	        border-radius: 2vw;
+	display: -ms-grid;
 	display: grid;
-	grid-template-columns: 70% 15% 15%;
+	-ms-grid-template-columns: 70% 15% 15%;
+	    grid-template-columns: 70% 15% 15%;
 	width: 90%;
 	position: relative;
 	cursor: pointer;	
@@ -128,9 +141,12 @@
 	font-size: 1vw;
 	padding: 0.3vw;
 	margin-top: 0.3vw;
-	border-radius: 2vw;
+	-webkit-border-radius: 2vw;
+	        border-radius: 2vw;
+	display: -ms-grid;
 	display: grid;
-	grid-template-columns: 55% 15% 15% 15%;
+	-ms-grid-template-columns: 55% 15% 15% 15%;
+	    grid-template-columns: 55% 15% 15% 15%;
 	width: 90%;
 	position: relative;
 	cursor: pointer;	

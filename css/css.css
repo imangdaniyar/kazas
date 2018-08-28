@@ -5,7 +5,8 @@ html{
 body{
 	margin:0;
 	padding: 0;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 	position: relative;
 	width: 100%;
 	height: 100%;
@@ -30,7 +31,9 @@ a{
 	font-size: 4vw;
 	top:65%;
 	left:10%;
-	transform: translateY(-100%);
+	-webkit-transform: translateY(-100%);
+	    -ms-transform: translateY(-100%);
+	        transform: translateY(-100%);
 	color:#fff;
 }
 .swiper-slide{
@@ -45,7 +48,8 @@ a{
 	color:lightgray;
 }
 .slider-button{
-	border-radius: 2vw;
+	-webkit-border-radius: 2vw;
+	        border-radius: 2vw;
 	border:0.1vw solid #007AFF;
 	background-color: rgb(0,0,0,0.5);
 	color:gray;
@@ -60,7 +64,9 @@ a{
 	position: absolute;
 	top:50%;
 	left:50%;
-	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	    -ms-transform: translate(-50%,-50%);
+	        transform: translate(-50%,-50%);
 }
 .slider-button:hover{
 	 background-color: rgb(0,122,255,0.3);
@@ -75,13 +81,17 @@ a{
 	margin: auto;
 	margin-top: 1vw;
 	height: auto;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 	min-height: 35vw;
 }
 .grid-container{
+	display: -ms-grid;
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-template-rows: auto;
+	-ms-grid-template-columns: 1fr 1fr 1fr 1fr;
+	    grid-template-columns: 1fr 1fr 1fr 1fr;
+	-ms-grid-template-rows: auto;
+	    grid-template-rows: auto;
 	height: auto;
 	grid-gap: 1vw;
 	width: 100%;
@@ -92,8 +102,11 @@ a{
 	width: 90%;
 	background-color: #fff;
 	font-family: 'Montserrat Alternates', sans-serif;
-	border-radius: 1vw;
+	-webkit-border-radius: 1vw;
+	        border-radius: 1vw;
 	cursor: pointer;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
 	transition: 0.5s;
 	padding: 0.5vw;
 }
@@ -101,7 +114,9 @@ a{
 	width: 100%;
 	height: 15vw;
 	
-	border-radius: 1vw;
+	-webkit-border-radius: 1vw;
+	
+	        border-radius: 1vw;
 }
 .card-title{
 	font-size: 1.5vw;
@@ -114,8 +129,13 @@ a{
 }
 .card:hover{
 	
+	-webkit-transition: 0.5s;
+	
+	-o-transition: 0.5s;
+	
 	transition: 0.5s;
-	box-shadow: 0vw 0vw 1vw gray;
+	-webkit-box-shadow: 0vw 0vw 1vw gray;
+	        box-shadow: 0vw 0vw 1vw gray;
 }
 .kek{
 	font-family: "Montserrat Alternates", sans-serif; color:gray; font-size:2vw;
